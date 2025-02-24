@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('libs/fontawesome-webfont.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Material Design Icons';
+    src: url('libs/materialdesign/fonts/materialdesignicons-webfont.woff2') format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Font Awesome 5 Brands';
+    font-style: normal;
+    font-weight: 400;
+    src: url("libs/fa-brands-400.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 900;
+    src: url("libs/fa-solid-900.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 400;
+    src: url("libs/fa-regular-400.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Brands';
+    font-style: normal;
+    font-weight: 400;
+    src: url("libs/fontawesome/webfonts/fa-brands-400.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Free';
+    font-style: normal;
+    font-weight: 900;
+    src: url("libs/fontawesome/webfonts/fa-solid-900.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Free';
+    font-style: normal;
+    font-weight: 400;
+    src: url("libs/fontawesome/webfonts/fa-regular-400.woff2") format("woff2");
+}
+
+@page {
+    margin: 0.5cm;
+}
+
+body * {
+    visibility: hidden;
+}
+
+#diagramCanvas {
+    visibility: visible;
+    max-width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)https://sequencediagram.org/ -->
+<html lang="en"><plasmo-csui><template shadowrootmode="open"><style>*,:before,:after{box-sizing:border-box;border:0 solid #e5e7eb}:before,:after{--tw-content:""}html,:host{-webkit-text-size-adjust:100%;tab-size:4;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}body{line-height:inherit;margin:0}hr{color:inherit;border-top-width:1px;height:0}abbr:where([title]){text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-feature-settings:normal;font-variation-settings:normal;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-size:1em}small{font-size:80%}sub,sup{vertical-align:baseline;font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-feature-settings:inherit;font-variation-settings:inherit;font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,[type=button],[type=reset],[type=submit]{-webkit-appearance:button;background-color:#0000;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button{height:auto}::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dl,dd,h1,h2,h3,h4,h5,h6,hr,figure,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}ol,ul,menu{margin:0;padding:0;list-style:none}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder{opacity:1;color:#9ca3af}textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}button,[role=button]{cursor:pointer}:disabled{cursor:default}img,svg,video,canvas,audio,iframe,embed,object{vertical-align:middle;display:block}img,video{max-width:100%;height:auto}[hidden]{display:none}:host{--background:0 0% 100%;--foreground:0,0%,31%;--card:0 0% 100%;--card-foreground:222.2 84% 4.9%;--popover:0 0% 100%;--popover-foreground:222.2 84% 4.9%;--primary:221.2 83.2% 53.3%;--primary-foreground:210 40% 98%;--secondary:210 40% 96.1%;--secondary-foreground:222.2 47.4% 11.2%;--muted:210 40% 96.1%;--muted-foreground:215.4 16.3% 46.9%;--accent:210 40% 96.1%;--accent-foreground:222.2 47.4% 11.2%;--destructive:0 84.2% 60.2%;--destructive-foreground:210 40% 98%;--border:214.3 31.8% 91.4%;--input:214.3 31.8% 91.4%;--ring:221.2 83.2% 53.3%;--radius:8px;--green:#16a34a;--red:#dc2626;--blue:#2563eb;--novel-highlight-default:#fff;--novel-highlight-purple:#f6f3f8;--novel-highlight-red:#fdebeb;--novel-highlight-yellow:#fbf4a2;--novel-highlight-blue:#c1ecf9;--novel-highlight-green:#acf79f;--novel-highlight-orange:#faebdd;--novel-highlight-pink:#faf1f5;--novel-highlight-gray:#f1f1ef}*,:before,:after,::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:#3b82f680;--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.tpe-sr-only{clip:rect(0,0,0,0);white-space:nowrap;border-width:0;width:1px;height:1px;margin:-1px;padding:0;position:absolute;overflow:hidden}.tpe-fixed{position:fixed}.tpe-absolute{position:absolute}.tpe-relative{position:relative}.tpe-sticky{position:sticky}.tpe-inset-0{inset:0}.tpe-bottom-0{bottom:0}.tpe-left-0{left:0}.tpe-left-1\/2{left:50%}.tpe-left-8{left:32px}.tpe-left-\[50\%\]{left:50%}.tpe-right-0{right:0}.tpe-right-2{right:8px}.tpe-right-4{right:16px}.tpe-right-8{right:32px}.tpe-top-0{top:0}.tpe-top-1\/2{top:50%}.tpe-top-4{top:16px}.tpe-top-8{top:32px}.tpe-top-\[50\%\]{top:50%}.tpe-z-10{z-index:10}.tpe-z-50{z-index:50}.tpe-z-\[10000\]{z-index:10000}.tpe-z-\[9999\]{z-index:9999}.tpe-z-auto{z-index:auto}.tpe-order-1{order:1}.-tpe-mx-1{margin-left:-4px;margin-right:-4px}.tpe-my-1{margin-top:4px;margin-bottom:4px}.tpe-my-2{margin-top:8px;margin-bottom:8px}.tpe-my-3{margin-top:12px;margin-bottom:12px}.tpe-my-4{margin-top:16px;margin-bottom:16px}.-tpe-ml-1{margin-left:-4px}.-tpe-mt-1{margin-top:-4px}.-tpe-mt-3{margin-top:-12px}.tpe-mb-0{margin-bottom:0}.tpe-mb-1{margin-bottom:4px}.tpe-mb-2{margin-bottom:8px}.tpe-mb-3{margin-bottom:12px}.tpe-ml-2{margin-left:8px}.tpe-ml-auto{margin-left:auto}.tpe-mr-1{margin-right:4px}.tpe-mr-2{margin-right:8px}.tpe-mt-1{margin-top:4px}.tpe-mt-2{margin-top:8px}.tpe-mt-4{margin-top:16px}.tpe-flex{display:flex}.tpe-inline-flex{display:inline-flex}.tpe-grid{display:grid}.tpe-hidden{display:none}.tpe-aspect-square{aspect-ratio:1}.tpe-h-1{height:4px}.tpe-h-10{height:40px}.tpe-h-3{height:12px}.tpe-h-4{height:16px}.tpe-h-5{height:20px}.tpe-h-6{height:24px}.tpe-h-60{height:240px}.tpe-h-8{height:32px}.tpe-h-9{height:36px}.tpe-h-\[0\]{height:0}.tpe-h-\[110px\]{height:110px}.tpe-h-\[210px\]{height:210px}.tpe-h-\[230px\]{height:230px}.tpe-h-\[24px\]{height:24px}.tpe-h-\[250px\]{height:250px}.tpe-h-\[28px\]{height:28px}.tpe-h-\[30px\]{height:30px}.tpe-h-\[350px\]{height:350px}.tpe-h-\[40px\]{height:40px}.tpe-h-\[47px\]{height:47px}.tpe-h-\[52px\]{height:52px}.tpe-h-\[650px\]{height:650px}.tpe-h-\[72px\]{height:72px}.tpe-h-\[var\(--radix-select-trigger-height\)\]{height:var(--radix-select-trigger-height)}.tpe-h-full{height:100%}.tpe-h-screen{height:100vh}.tpe-max-h-\[250px\]{max-height:250px}.tpe-max-h-\[300px\]{max-height:300px}.tpe-max-h-\[430px\]{max-height:430px}.tpe-max-h-\[600px\]{max-height:600px}.tpe-w-10{width:40px}.tpe-w-3{width:12px}.tpe-w-4{width:16px}.tpe-w-5{width:20px}.tpe-w-6{width:24px}.tpe-w-60{width:240px}.tpe-w-8{width:32px}.tpe-w-\[150px\]{width:150px}.tpe-w-\[160px\]{width:160px}.tpe-w-\[18px\]{width:18px}.tpe-w-\[200px\]{width:200px}.tpe-w-\[209px\]{width:209px}.tpe-w-\[2px\]{width:2px}.tpe-w-\[300px\]{width:300px}.tpe-w-\[30px\]{width:30px}.tpe-w-\[310px\]{width:310px}.tpe-w-\[347px\]{width:347px}.tpe-w-\[353px\]{width:353px}.tpe-w-\[360px\]{width:360px}.tpe-w-\[400px\]{width:400px}.tpe-w-\[430px\]{width:430px}.tpe-w-\[600px\]{width:600px}.tpe-w-\[628px\]{width:628px}.tpe-w-\[690px\]{width:690px}.tpe-w-full{width:100%}.tpe-min-w-\[8rem\]{min-width:8rem}.tpe-min-w-\[var\(--radix-select-trigger-width\)\]{min-width:var(--radix-select-trigger-width)}.tpe-max-w-\[200px\]{max-width:200px}.tpe-max-w-\[600px\]{max-width:600px}.tpe-max-w-lg{max-width:32rem}.tpe-flex-1{flex:1}.tpe-shrink-0{flex-shrink:0}.-tpe-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.-tpe-translate-y-1\/2{--tw-translate-y:-50%;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.tpe-translate-x-\[-50\%\]{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.tpe-translate-y-\[-50\%\]{--tw-translate-y:-50%;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}@keyframes tpe-spin{to{transform:rotate(360deg)}}.tpe-animate-spin{animation:1s linear infinite tpe-spin}.tpe-cursor-default{cursor:default}.tpe-cursor-move{cursor:move}.tpe-cursor-not-allowed{cursor:not-allowed}.tpe-cursor-pointer{cursor:pointer}.tpe-select-none{user-select:none}.tpe-grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.tpe-flex-row{flex-direction:row}.tpe-flex-col{flex-direction:column}.tpe-flex-col-reverse{flex-direction:column-reverse}.tpe-items-start{align-items:flex-start}.tpe-items-end{align-items:flex-end}.tpe-items-center{align-items:center}.tpe-justify-start{justify-content:flex-start}.tpe-justify-end{justify-content:flex-end}.tpe-justify-center{justify-content:center}.tpe-justify-between{justify-content:space-between}.tpe-gap-1{gap:4px}.tpe-gap-2{gap:8px}.tpe-gap-3{gap:12px}.tpe-gap-4{gap:16px}.tpe-space-y-0>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0px*calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0px*var(--tw-space-y-reverse))}.tpe-space-y-1>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(4px*calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(4px*var(--tw-space-y-reverse))}.tpe-overflow-auto{overflow:auto}.tpe-overflow-hidden{overflow:hidden}.tpe-overflow-y-auto{overflow-y:auto}.tpe-overflow-x-hidden{overflow-x:hidden}.tpe-truncate{text-overflow:ellipsis;white-space:nowrap;overflow:hidden}.tpe-whitespace-normal{white-space:normal}.tpe-whitespace-nowrap{white-space:nowrap}.tpe-break-words{overflow-wrap:break-word}.tpe-rounded-2xl{border-radius:16px}.tpe-rounded-\[14px\]{border-radius:14px}.tpe-rounded-full{border-radius:9999px}.tpe-rounded-lg{border-radius:var(--radius)}.tpe-rounded-md{border-radius:calc(var(--radius) - 2px)}.tpe-rounded-sm{border-radius:calc(var(--radius) - 4px)}.tpe-rounded-xl{border-radius:12px}.tpe-border{border-width:1px}.tpe-border-4{border-width:4px}.tpe-border-b{border-bottom-width:1px}.tpe-border-none{border-style:none}.tpe-border-input{border-color:hsl(var(--input))}.tpe-bg-\[\#333333\]{--tw-bg-opacity:1;background-color:rgb(51 51 51/var(--tw-bg-opacity))}.tpe-bg-\[\#e0e0e0\]{--tw-bg-opacity:1;background-color:rgb(224 224 224/var(--tw-bg-opacity))}.tpe-bg-background{background-color:hsl(var(--background))}.tpe-bg-background\/80{background-color:hsl(var(--background)/.8)}.tpe-bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0/var(--tw-bg-opacity))}.tpe-bg-border{background-color:hsl(var(--border))}.tpe-bg-card{background-color:hsl(var(--card))}.tpe-bg-destructive{background-color:hsl(var(--destructive))}.tpe-bg-muted{background-color:hsl(var(--muted))}.tpe-bg-popover{background-color:hsl(var(--popover))}.tpe-bg-primary{background-color:hsl(var(--primary))}.tpe-bg-transparent{background-color:#0000}.tpe-bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity))}.tpe-bg-opacity-25{--tw-bg-opacity:.25}.tpe-bg-gradient-to-tr{background-image:linear-gradient(to top right,var(--tw-gradient-stops))}.tpe-from-primary\/40{--tw-gradient-from:hsl(var(--primary)/.4)var(--tw-gradient-from-position);--tw-gradient-to:hsl(var(--primary)/0)var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.tpe-via-primary{--tw-gradient-to:hsl(var(--primary)/0)var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),hsl(var(--primary))var(--tw-gradient-via-position),var(--tw-gradient-to)}.tpe-to-primary\/40{--tw-gradient-to:hsl(var(--primary)/.4)var(--tw-gradient-to-position)}.tpe-fill-primary{fill:hsl(var(--primary))}.tpe-stroke-primary{stroke:hsl(var(--primary))}.tpe-stroke-white{stroke:#fff}.tpe-stroke-1{stroke-width:1px}.tpe-stroke-\[1\.35\]{stroke-width:1.35px}.tpe-object-cover{-o-object-fit:cover;object-fit:cover}.tpe-p-0{padding:0}.tpe-p-1{padding:4px}.tpe-p-4{padding:16px}.tpe-p-5{padding:20px}.tpe-p-6{padding:24px}.tpe-p-7{padding:28px}.tpe-p-8{padding:32px}.tpe-p-\[1\.6px\]{padding:1.6px}.tpe-p-\[10px\]{padding:10px}.tpe-px-10{padding-left:40px;padding-right:40px}.tpe-px-2{padding-left:8px;padding-right:8px}.tpe-px-3{padding-left:12px;padding-right:12px}.tpe-px-4{padding-left:16px;padding-right:16px}.tpe-px-6{padding-left:24px;padding-right:24px}.tpe-px-\[4px\]{padding-left:4px;padding-right:4px}.tpe-py-1{padding-top:4px;padding-bottom:4px}.tpe-py-2{padding-top:8px;padding-bottom:8px}.tpe-py-3{padding-top:12px;padding-bottom:12px}.tpe-py-5{padding-top:20px;padding-bottom:20px}.tpe-py-6{padding-top:24px;padding-bottom:24px}.tpe-py-\[6px\]{padding-top:6px;padding-bottom:6px}.tpe-pl-2{padding-left:8px}.tpe-pr-2{padding-right:8px}.tpe-pr-4{padding-right:16px}.tpe-pr-8{padding-right:32px}.tpe-pr-\[6px\]{padding-right:6px}.tpe-pt-0{padding-top:0}.tpe-pt-3{padding-top:12px}.tpe-pt-4{padding-top:16px}.tpe-text-center{text-align:center}.tpe-text-start{text-align:start}.tpe-text-2xl{font-size:24px}.tpe-text-lg{font-size:18px}.tpe-text-md{font-size:16px}.tpe-text-sm{font-size:14px}.tpe-text-xs{font-size:12px}.tpe-font-bold{font-weight:700}.tpe-font-medium{font-weight:500}.tpe-font-normal{font-weight:400}.tpe-font-semibold{font-weight:600}.tpe-leading-none{line-height:1}.tpe-tracking-tight{letter-spacing:-.025em}.tpe-tracking-widest{letter-spacing:.1em}.tpe-text-\[\#e0e0e0\]{--tw-text-opacity:1;color:rgb(224 224 224/var(--tw-text-opacity))}.tpe-text-black{--tw-text-opacity:1;color:rgb(0 0 0/var(--tw-text-opacity))}.tpe-text-card-foreground{color:hsl(var(--card-foreground))}.tpe-text-destructive-foreground{color:hsl(var(--destructive-foreground))}.tpe-text-foreground{color:hsl(var(--foreground))}.tpe-text-muted-foreground{color:hsl(var(--muted-foreground))}.tpe-text-popover-foreground{color:hsl(var(--popover-foreground))}.tpe-text-primary{color:hsl(var(--primary))}.tpe-text-primary-foreground{color:hsl(var(--primary-foreground))}.tpe-text-red-600{--tw-text-opacity:1;color:rgb(220 38 38/var(--tw-text-opacity))}.tpe-text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity))}.tpe-opacity-0{opacity:0}.tpe-opacity-100{opacity:1}.tpe-opacity-50{opacity:.5}.tpe-opacity-70{opacity:.7}.tpe-shadow{--tw-shadow:0 1px 3px 0 #0000001a,0 1px 2px -1px #0000001a;--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color),0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.tpe-shadow-lg{--tw-shadow:0 10px 15px -3px #0000001a,0 4px 6px -4px #0000001a;--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.tpe-shadow-md{--tw-shadow:0 4px 6px -1px #0000001a,0 2px 4px -2px #0000001a;--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.tpe-shadow-none{--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.tpe-shadow-sm{--tw-shadow:0 1px 2px 0 #0000000d;--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.tpe-shadow-xl{--tw-shadow:0 20px 25px -5px #0000001a,0 8px 10px -6px #0000001a;--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.tpe-outline-none{outline-offset:2px;outline:2px solid #0000}.tpe-outline{outline-style:solid}.tpe-outline-1{outline-width:1px}.-tpe-outline-offset-\[4px\]{outline-offset:-4px}.tpe-outline-white{outline-color:#fff}.tpe-ring-offset-background{--tw-ring-offset-color:hsl(var(--background))}.tpe-backdrop-blur-sm{--tw-backdrop-blur:blur(4px);backdrop-filter:var(--tw-backdrop-blur)var(--tw-backdrop-brightness)var(--tw-backdrop-contrast)var(--tw-backdrop-grayscale)var(--tw-backdrop-hue-rotate)var(--tw-backdrop-invert)var(--tw-backdrop-opacity)var(--tw-backdrop-saturate)var(--tw-backdrop-sepia)}.tpe-transition-all{transition-property:all;transition-duration:.15s;transition-timing-function:cubic-bezier(.4,0,.2,1)}.tpe-transition-colors{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-duration:.15s;transition-timing-function:cubic-bezier(.4,0,.2,1)}.tpe-transition-opacity{transition-property:opacity;transition-duration:.15s;transition-timing-function:cubic-bezier(.4,0,.2,1)}.tpe-duration-200{transition-duration:.2s}@keyframes enter{0%{opacity:var(--tw-enter-opacity,1);transform:translate3d(var(--tw-enter-translate-x,0),var(--tw-enter-translate-y,0),0)scale3d(var(--tw-enter-scale,1),var(--tw-enter-scale,1),var(--tw-enter-scale,1))rotate(var(--tw-enter-rotate,0))}}@keyframes exit{to{opacity:var(--tw-exit-opacity,1);transform:translate3d(var(--tw-exit-translate-x,0),var(--tw-exit-translate-y,0),0)scale3d(var(--tw-exit-scale,1),var(--tw-exit-scale,1),var(--tw-exit-scale,1))rotate(var(--tw-exit-rotate,0))}}.tpe-duration-200{animation-duration:.2s}.file\:tpe-font-medium::file-selector-button{font-weight:500}.placeholder\:tpe-text-muted-foreground::placeholder{color:hsl(var(--muted-foreground))}.hover\:tpe-cursor-pointer:hover{cursor:pointer}.hover\:tpe-bg-accent:hover{background-color:hsl(var(--accent))}.hover\:tpe-bg-destructive\/90:hover{background-color:hsl(var(--destructive)/.9)}.hover\:tpe-bg-primary\/40:hover{background-color:hsl(var(--primary)/.4)}.hover\:tpe-bg-primary\/90:hover{background-color:hsl(var(--primary)/.9)}.hover\:tpe-bg-secondary:hover{background-color:hsl(var(--secondary))}.hover\:tpe-text-accent-foreground:hover{color:hsl(var(--accent-foreground))}.hover\:tpe-text-card-foreground:hover{color:hsl(var(--card-foreground))}.hover\:tpe-underline:hover{text-decoration-line:underline}.hover\:tpe-opacity-100:hover{opacity:1}.focus\:tpe-bg-accent:focus{background-color:hsl(var(--accent))}.focus\:tpe-text-accent-foreground:focus{color:hsl(var(--accent-foreground))}.focus\:tpe-outline-none:focus{outline-offset:2px;outline:2px solid #0000}.focus\:tpe-ring-1:focus{--tw-ring-offset-shadow:var(--tw-ring-inset)0 0 0 var(--tw-ring-offset-width)var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset)0 0 0 calc(1px + var(--tw-ring-offset-width))var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.focus\:tpe-ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset)0 0 0 var(--tw-ring-offset-width)var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset)0 0 0 calc(2px + var(--tw-ring-offset-width))var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.focus\:tpe-ring-ring:focus{--tw-ring-color:hsl(var(--ring))}.focus\:tpe-ring-offset-2:focus{--tw-ring-offset-width:2px}.focus-visible\:tpe-outline-none:focus-visible{outline-offset:2px;outline:2px solid #0000}.focus-visible\:tpe-ring-1:focus-visible{--tw-ring-offset-shadow:var(--tw-ring-inset)0 0 0 var(--tw-ring-offset-width)var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset)0 0 0 calc(1px + var(--tw-ring-offset-width))var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.focus-visible\:tpe-ring-ring:focus-visible{--tw-ring-color:hsl(var(--ring))}.disabled\:tpe-pointer-events-none:disabled{pointer-events:none}.disabled\:tpe-cursor-not-allowed:disabled{cursor:not-allowed}.disabled\:tpe-opacity-50:disabled{opacity:.5}.tpe-peer:disabled~.peer-disabled\:tpe-cursor-not-allowed{cursor:not-allowed}.tpe-peer:disabled~.peer-disabled\:tpe-opacity-70{opacity:.7}.data-\[disabled\=true\]\:tpe-pointer-events-none[data-disabled=true],.data-\[disabled\]\:tpe-pointer-events-none[data-disabled]{pointer-events:none}.data-\[side\=bottom\]\:tpe-translate-y-1[data-side=bottom]{--tw-translate-y:4px;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.data-\[side\=left\]\:-tpe-translate-x-1[data-side=left]{--tw-translate-x:-4px;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.data-\[side\=right\]\:tpe-translate-x-1[data-side=right]{--tw-translate-x:4px;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.data-\[side\=top\]\:-tpe-translate-y-1[data-side=top]{--tw-translate-y:-4px;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.data-\[selected\=true\]\:tpe-bg-accent[data-selected=true],.data-\[state\=open\]\:tpe-bg-accent[data-state=open]{background-color:hsl(var(--accent))}.data-\[selected\=true\]\:tpe-text-accent-foreground[data-selected=true]{color:hsl(var(--accent-foreground))}.data-\[state\=open\]\:tpe-text-muted-foreground[data-state=open]{color:hsl(var(--muted-foreground))}.data-\[disabled\=true\]\:tpe-opacity-50[data-disabled=true],.data-\[disabled\]\:tpe-opacity-50[data-disabled]{opacity:.5}.data-\[state\=open\]\:tpe-animate-in[data-state=open]{--tw-enter-opacity:initial;--tw-enter-scale:initial;--tw-enter-rotate:initial;--tw-enter-translate-x:initial;--tw-enter-translate-y:initial;animation-name:enter;animation-duration:.15s}.data-\[state\=closed\]\:tpe-animate-out[data-state=closed]{--tw-exit-opacity:initial;--tw-exit-scale:initial;--tw-exit-rotate:initial;--tw-exit-translate-x:initial;--tw-exit-translate-y:initial;animation-name:exit;animation-duration:.15s}.data-\[state\=closed\]\:tpe-fade-out-0[data-state=closed]{--tw-exit-opacity:0}.data-\[state\=open\]\:tpe-fade-in-0[data-state=open]{--tw-enter-opacity:0}.data-\[state\=closed\]\:tpe-zoom-out-95[data-state=closed]{--tw-exit-scale:.95}.data-\[state\=open\]\:tpe-zoom-in-95[data-state=open]{--tw-enter-scale:.95}.data-\[side\=bottom\]\:tpe-slide-in-from-top-2[data-side=bottom]{--tw-enter-translate-y:-8px}.data-\[side\=left\]\:tpe-slide-in-from-right-2[data-side=left]{--tw-enter-translate-x:8px}.data-\[side\=right\]\:tpe-slide-in-from-left-2[data-side=right]{--tw-enter-translate-x:-8px}.data-\[side\=top\]\:tpe-slide-in-from-bottom-2[data-side=top]{--tw-enter-translate-y:8px}.data-\[state\=closed\]\:tpe-slide-out-to-left-1\/2[data-state=closed]{--tw-exit-translate-x:-50%}.data-\[state\=closed\]\:tpe-slide-out-to-top-\[48\%\][data-state=closed]{--tw-exit-translate-y:-48%}.data-\[state\=open\]\:tpe-slide-in-from-left-1\/2[data-state=open]{--tw-enter-translate-x:-50%}.data-\[state\=open\]\:tpe-slide-in-from-top-\[48\%\][data-state=open]{--tw-enter-translate-y:-48%}@media (width>=640px){.sm\:tpe-flex-row{flex-direction:row}.sm\:tpe-justify-center{justify-content:center}.sm\:tpe-space-x-2>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(8px*var(--tw-space-x-reverse));margin-left:calc(8px*calc(1 - var(--tw-space-x-reverse)))}.sm\:tpe-rounded-lg{border-radius:var(--radius)}.sm\:tpe-text-md{font-size:16px}}@media (width>=768px){.md\:tpe-w-full{width:100%}}.\[\&_\[cmdk-group-heading\]\]\:tpe-px-2 [cmdk-group-heading]{padding-left:8px;padding-right:8px}.\[\&_\[cmdk-group-heading\]\]\:tpe-text-xs [cmdk-group-heading]{font-size:12px}.\[\&_\[cmdk-group-heading\]\]\:tpe-font-medium [cmdk-group-heading]{font-weight:500}.\[\&_\[cmdk-group-heading\]\]\:tpe-text-muted-foreground [cmdk-group-heading]{color:hsl(var(--muted-foreground))}.\[\&_\[cmdk-group\]\:tpe-not\(\[hidden\]\)_\~\[cmdk-group\]\]\:tpe-pt-0 [cmdk-group]:tpe-not([hidden])~[cmdk-group]{padding-top:0}.\[\&_\[cmdk-group\]\]\:tpe-px-2 [cmdk-group]{padding-left:8px;padding-right:8px}.\[\&_\[cmdk-input-wrapper\]_svg\]\:tpe-h-5 [cmdk-input-wrapper] svg{height:20px}.\[\&_\[cmdk-input-wrapper\]_svg\]\:tpe-w-5 [cmdk-input-wrapper] svg{width:20px}.\[\&_\[cmdk-item\]\]\:tpe-px-2 [cmdk-item]{padding-left:8px;padding-right:8px}.\[\&_\[cmdk-item\]\]\:tpe-py-3 [cmdk-item]{padding-top:12px;padding-bottom:12px}.\[\&_\[cmdk-item\]_svg\]\:tpe-h-5 [cmdk-item] svg{height:20px}.\[\&_\[cmdk-item\]_svg\]\:tpe-w-5 [cmdk-item] svg{width:20px}</style><div id="plasmo-shadow-container" style="z-index: 2147483647; position: relative;"><div id="plasmo-overlay-0" class="plasmo-csui-container" style="display: flex; position: absolute; top: 0px; left: 0px;"><div><div class="tpe-select-none tpe-flex tpe-fixed tpe-top-0 tpe-right-0 tpe-bottom-0 tpe-left-0 tpe-w-full tpe-pt-4 tpe-pr-4 tpe-justify-end  tpe-hidden"><div class="tpe-relative tpe-transition-all tpe-shadow-xl tpe-overflow-hidden tpe-p-7 tpe-w-[360px] tpe-max-h-[430px] tpe-hidden tpe-bg-white tpe-flex-col tpe-rounded-lg"><div class="tpe-w-full tpe-h-full tpe-justify-between tpe-flex tpe-flex-col tpe-gap-2"><div class="tpe-w-full tpe-flex tpe-justify-center tpe-items-center tpe-mb-2"><img src="data:image/svg+xml,%3Csvg%20width%3D%22200%22%20height%3D%2248%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M31.815%2034.543H7.555V6.885h24.26v27.658Zm.05-31.673H7.504c-2.131%200-3.956%201.868-3.956%204.003v27.798c0%202.135%201.825%204.11%203.956%204.11h11.401v6.471l12.92-6.714c2.131%200%203.996-1.732%203.996-3.867V6.873c0-2.135-1.825-4.003-3.956-4.003Z%22%20fill%3D%22%232463EB%22%2F%3E%3Cpath%20d%3D%22M10.815%2011.64c0-.63.222-1.157.664-1.582a2.196%202.196%200%200%201%201.57-.638h14.058c.631%200%201.161.215%201.59.644.429.43.643.956.643%201.576%200%20.603-.214%201.127-.643%201.57a2.118%202.118%200%200%201-1.59.668h-4.22V29c0%20.785-.27%201.45-.814%201.994a2.7%202.7%200%200%201-1.987.817c-.783%200-1.449-.272-1.997-.817-.548-.544-.822-1.209-.822-1.994V13.878h-4.219c-.602%200-1.125-.22-1.57-.662a2.142%202.142%200%200%201-.663-1.576Zm27.51%2017.448V17.877c0-.688.25-1.284.75-1.785.501-.502%201.09-.753%201.768-.753.705%200%201.308.251%201.809.753.5.501.75%201.097.75%201.785v.702h.115a6.722%206.722%200%200%201%20.892-1.57c.36-.463.716-.79%201.068-.981a2.573%202.573%200%200%201%201.145-.274c.878%200%201.521.251%201.93.753.41.502.616%201.044.616%201.626%200%20.603-.21%201.141-.63%201.614-.42.474-.973.712-1.66.712-.409%200-.823.087-1.243.263-.42.177-.778.443-1.074.796-.525.65-.788%201.567-.788%202.75v4.82c0%20.744-.266%201.384-.798%201.92a2.616%202.616%200%200%201-1.92.803c-.743%200-1.383-.268-1.922-.803-.54-.535-.809-1.176-.809-1.92Zm10.543-1.995c0-2.072.781-3.458%202.344-4.157%201.565-.698%203.54-1.047%205.923-1.047.45%200%20.784.01%201.004.03l.986.028c0-.668-.048-1.2-.144-1.596a1.577%201.577%200%200%200-.63-.949c-.323-.234-.805-.35-1.445-.35-.895%200-1.563.282-2.003.846-.485.669-1.081%201.003-1.788%201.003a2.223%202.223%200%200%201-1.65-.695%202.32%202.32%200%200%201-.68-1.684c0-.392.085-.76.255-1.104.173-.344.427-.627.761-.847a8.304%208.304%200%200%201%202.418-1.053%2010.711%2010.711%200%200%201%202.745-.351c2.422%200%204.263.519%205.522%201.556%201.26%201.037%201.89%202.74%201.89%205.11l-.03%204.174c0%20.724.01%201.264.03%201.62l.026%201.633c0%20.688-.25%201.286-.75%201.792-.501.506-1.1.76-1.796.76-.648%200-1.206-.207-1.673-.619a2.505%202.505%200%200%201-.845-1.545c-.6.84-1.307%201.436-2.122%201.792-.817.353-1.784.53-2.9.53-.992%200-1.902-.191-2.73-.574a4.672%204.672%200%200%201-1.98-1.677c-.492-.736-.738-1.611-.738-2.626Zm5.334-.327c0%20.524.182.94.546%201.245.361.306.814.46%201.357.46.963%200%201.712-.324%202.246-.97.534-.643.801-1.457.801-2.443v-.23l-1.73-.026c-2.147%200-3.22.654-3.22%201.964Zm12.675%202.322V17.877c0-.688.25-1.284.751-1.785.501-.502%201.09-.753%201.768-.753.705%200%201.308.251%201.809.753.5.501.75%201.097.75%201.785v.402a5.678%205.678%200%200%201%201.96-2.174c.858-.569%201.921-.854%203.19-.854%201.955%200%203.382.555%204.28%201.664.895%201.11%201.343%202.629%201.343%204.56v7.613c0%20.744-.267%201.384-.801%201.92a2.612%202.612%200%200%201-1.916.803c-.746%200-1.388-.268-1.927-.803-.538-.535-.808-1.176-.808-1.92v-6.753c0-1.1-.233-1.865-.7-2.295-.467-.43-1.001-.645-1.603-.645-.723%200-1.345.262-1.866.784-.518.52-.778%201.463-.778%202.83v6.079c0%20.744-.267%201.384-.801%201.92a2.616%202.616%200%200%201-1.92.803c-.743%200-1.384-.268-1.922-.803-.54-.535-.809-1.176-.809-1.92Zm17.582-8.43c0-1.683.658-3.018%201.973-4.006%201.316-.99%203.07-1.485%205.264-1.485%201.603%200%203%20.255%204.192.766%201.192.513%201.788%201.295%201.788%202.346%200%20.706-.212%201.27-.636%201.69-.424.42-.946.631-1.566.631-.705%200-1.31-.325-1.818-.975a1.985%201.985%200%200%200-.728-.645c-.296-.152-.735-.229-1.316-.229-.629%200-1.125.108-1.489.324-.361.214-.542.526-.542.938%200%20.335.138.59.414.766.276.178.743.333%201.401.466l2.29.472c1.756.374%203.028.93%203.819%201.67.792.741%201.189%201.771%201.189%203.092%200%201.719-.63%203.083-1.89%204.094-1.26%201.008-3.157%201.511-5.694%201.511-1.765%200-3.257-.256-4.475-.769-1.222-.51-1.832-1.32-1.832-2.43%200-.65.216-1.213.65-1.69.433-.477.988-.716%201.666-.716.391%200%20.724.081%201%20.243.279.162.552.4.819.715.294.374.587.64.879.797.29.157.759.236%201.407.236%201.507%200%202.26-.468%202.26-1.404a.973.973%200%200%200-.333-.766c-.225-.195-.68-.36-1.368-.496l-1.99-.415c-1.838-.373-3.188-.933-4.047-1.677-.858-.747-1.287-1.765-1.287-3.054Zm16.12%208.457V11.212c0-.747.265-1.386.795-1.917.53-.529%201.176-.793%201.94-.793.743%200%201.377.264%201.902.793.523.531.785%201.17.785%201.917v10.12l4.435-5.22c.411-.506.974-.764%201.69-.773.6%200%201.117.217%201.553.651.433.437.65.955.65%201.556%200%20.545-.196%201.046-.586%201.505l-2.492%202.754%203.778%206.105c.258.412.387.862.387%201.35a2.45%202.45%200%200%201-.751%201.805c-.5.497-1.098.746-1.794.746-.47%200-.902-.112-1.297-.337a2.367%202.367%200%200%201-.909-.895l-3.246-5.362-1.418%201.576v2.322a2.6%202.6%200%200%201-.785%201.906c-.525.527-1.169.79-1.933.79a2.611%202.611%200%200%201-1.909-.79%202.582%202.582%200%200%201-.795-1.906Zm16.437-.027V17.877c0-.688.25-1.284.751-1.785.503-.502%201.092-.753%201.768-.753.705%200%201.308.251%201.808.753.503.501.755%201.097.755%201.785v.702h.114a6.717%206.717%200%200%201%20.892-1.57c.357-.463.712-.79%201.065-.981a2.57%202.57%200%200%201%201.144-.274c.878%200%201.523.251%201.933.753.409.502.613%201.044.613%201.626%200%20.603-.208%201.141-.626%201.614-.42.474-.973.712-1.66.712-.411%200-.826.087-1.246.263a2.79%202.79%200%200%200-1.071.796c-.525.65-.788%201.567-.788%202.75v4.82c0%20.744-.267%201.384-.801%201.92-.535.535-1.174.803-1.917.803-.745%200-1.387-.268-1.926-.803-.539-.535-.808-1.176-.808-1.92Zm11.988-18.065c0-.63.225-1.168.674-1.613a2.219%202.219%200%200%201%201.616-.665h1.344c.631%200%201.169.225%201.616.675.449.448.674.982.674%201.603%200%20.632-.227%201.172-.681%201.62-.453.45-.99.675-1.609.675h-1.344a2.202%202.202%200%200%201-1.616-.675%202.205%202.205%200%200%201-.674-1.62Zm.229%2018.065V18.076c0-.745.27-1.387.808-1.927.539-.54%201.181-.81%201.927-.81.743%200%201.381.27%201.916.81.534.54.801%201.182.801%201.927v11.012c0%20.744-.269%201.384-.808%201.92-.539.535-1.175.803-1.909.803-.746%200-1.388-.268-1.927-.803-.538-.535-.808-1.176-.808-1.92Zm8.342%206.55V17.847c0-.687.245-1.276.737-1.769a2.398%202.398%200%200%201%201.765-.739c.707%200%201.303.246%201.788.74.487.492.73%201.081.73%201.767v.173c.649-.878%201.362-1.558%202.139-2.042.777-.484%201.799-.726%203.068-.726%201.403%200%202.588.36%203.556%201.077.967.718%201.692%201.678%202.175%202.882.481%201.204.721%202.556.721%204.056%200%201.76-.312%203.296-.936%204.61-.625%201.314-1.49%202.32-2.597%203.017-1.107.698-2.36%201.046-3.761%201.046-1.509%200-2.821-.501-3.937-1.505v5.204c0%20.747-.266%201.387-.798%201.92a2.615%202.615%200%200%201-1.919.803c-.744%200-1.384-.27-1.923-.81-.539-.54-.808-1.177-.808-1.913Zm5.307-12.071c0%201.644.269%202.839.808%203.584.539.747%201.247%201.12%202.125%201.12.857%200%201.566-.393%202.125-1.178.556-.783.835-1.958.835-3.526%200-1.548-.27-2.683-.808-3.405-.539-.72-1.218-1.08-2.038-1.08-.916%200-1.653.37-2.212%201.11-.557.74-.835%201.865-.835%203.375Zm11.944-6.163c0-.506.176-.937.529-1.292.352-.353.772-.53%201.259-.53h1l.115-2.18a2.427%202.427%200%200%201%20.774-1.66%202.387%202.387%200%200%201%201.718-.689c.685%200%201.271.247%201.758.74.487.49.73%201.08.73%201.768v2.021h1.731c.485%200%20.905.177%201.26.53.352.355.529.776.529%201.262%200%20.506-.177.937-.529%201.293-.355.353-.775.53-1.26.53h-1.616v6.536c0%20.803.172%201.372.515%201.704.344.336.863.503%201.559.503.447.095.829.324%201.145.689.315.362.472.787.472%201.275%200%20.412-.112.78-.337%201.104a1.979%201.979%200%200%201-.865.715c-.782.135-1.707.207-2.775.216-1.879.01-3.209-.454-3.991-1.39-.763-.907-1.145-2.307-1.145-4.202v-.141l.027-7.01h-.815c-.487%200-.907-.176-1.259-.53a1.73%201.73%200%200%201-.529-1.262Zm12.561%206.22c0-1.642.331-3.1.993-4.37a7.27%207.27%200%200%201%202.896-2.997c1.269-.727%202.785-1.09%204.55-1.09%201.755%200%203.267.363%204.536%201.09%201.268.727%202.225%201.726%202.869%202.997.642%201.27.963%202.709.963%204.313%200%201.626-.336%203.08-1.007%204.36a7.327%207.327%200%200%201-2.926%203.01c-1.278.727-2.794%201.09-4.55%201.09-1.764%200-3.271-.363-4.519-1.09a7.115%207.115%200%200%201-2.839-2.997c-.644-1.27-.966-2.71-.966-4.316Zm5.449-.057c0%201.435.248%202.551.744%203.347.496.8%201.236%201.198%202.219%201.198.972%200%201.702-.401%202.189-1.204.485-.803.727-1.907.727-3.311%200-1.406-.242-2.51-.727-3.31-.487-.804-1.227-1.205-2.219-1.205-.972%200-1.704.393-2.196%201.18-.492.79-.737%201.892-.737%203.305Zm13.291%205.52v-11.21c0-.688.25-1.284.751-1.785.501-.502%201.089-.753%201.765-.753.707%200%201.311.251%201.811.753.501.501.751%201.097.751%201.785v.702h.115a6.717%206.717%200%200%201%20.892-1.57c.359-.463.715-.79%201.068-.981a2.555%202.555%200%200%201%201.145-.274c.875%200%201.518.251%201.929.753.411.502.616%201.044.616%201.626%200%20.603-.21%201.141-.629%201.614-.42.474-.974.712-1.661.712-.41%200-.825.087-1.242.263-.42.177-.778.443-1.074.796-.526.65-.788%201.567-.788%202.75v4.82c0%20.744-.268%201.384-.802%201.92a2.605%202.605%200%200%201-1.916.803c-.743%200-1.384-.268-1.923-.803-.539-.535-.808-1.176-.808-1.92Z%22%20fill%3D%22%232463EB%22%2F%3E%3C%2Fsvg%3E" class="tpe-w-[200px] tpe-h-[47px]"></div><div class="tpe-rounded-xl tpe-border tpe-bg-card tpe-text-card-foreground tpe-shadow-none tpe-cursor-pointer hover:tpe-bg-secondary tpe-rounded-lg tpe-mb-0 tpe-mt-1"><div class="tpe-flex tpe-flex-col tpe-space-y-1.5 tpe-p-6 tpe-flex tpe-flex-row tpe-items-center tpe-justify-between tpe-space-y-0 tpe-py-5 tpe-pt-3 tpe-px-6"><h3 class="tpe-font-semibold tpe-leading-none tpe-tracking-tight tpe-flex tpe-flex-1 tpe-flex-col tpe-items-center tpe-justify-center tpe-gap-1 tpe-text-md tpe-text-center tpe-font-bold tpe-mb-1"><div class="tpe-flex tpe-h-[30px] tpe-w-[30px] tpe-flex-1 tpe-items-center tpe-justify-center tpe-rounded-full"><img src="data:image/svg+xml,%3Csvg%20width%3D%2236%22%20height%3D%2237%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M18%2034.92c9.204%200%2016.666-7.463%2016.666-16.667%200-9.205-7.462-16.667-16.666-16.667-9.205%200-16.667%207.462-16.667%2016.667%200%209.204%207.462%2016.666%2016.667%2016.666Z%22%20stroke%3D%22%232563EB%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20opacity%3D%22.8%22%20d%3D%22M18%2024.253a6%206%200%201%200%200-12%206%206%200%200%200%200%2012Z%22%20fill%3D%22%232563EB%22%2F%3E%3C%2Fsvg%3E" class="tpe-w-[30px] tpe-h-[30px] tpe-stroke-primary"></div>Yozmoq</h3><div class="tpe-text-center tpe-text-sm tpe-text-muted-foreground">Ghi lại màn hình, giọng nói của bạn hoặc cả hai. Gửi bản ghi âm và bản chép lời kèm theo liên kết.</div></div></div><div class="tpe-grid tpe-grid-cols-2 tpe-gap-4 tpe-mt-1 tpe-mb-2"><div class="tpe-rounded-xl tpe-border tpe-bg-card tpe-text-card-foreground tpe-shadow-none tpe-h-[52px] hover:tpe-bg-secondary tpe-cursor-pointer tpe-rounded-lg tpe-flex tpe-justify-center tpe-items-center"><div class="tpe-flex tpe-font-semibold tpe-text-md tpe-items-center tpe-justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard tpe-mr-1 tpe-stroke-[1.35]"><rect width="7" height="9" x="3" y="3" rx="1"></rect><rect width="7" height="5" x="14" y="3" rx="1"></rect><rect width="7" height="9" x="14" y="12" rx="1"></rect><rect width="7" height="5" x="3" y="16" rx="1"></rect></svg>bảng điều khiển</div></div><div class="tpe-rounded-xl tpe-border tpe-bg-card tpe-text-card-foreground tpe-shadow-none tpe-h-[52px] hover:tpe-bg-secondary tpe-cursor-pointer tpe-rounded-lg tpe-flex tpe-justify-center tpe-items-center"><div class="tpe-flex tpe-font-semibold tpe-text-md tpe-items-center tpe-justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text tpe-mr-1 tpe-stroke-[1.35]"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>Các tập tin</div></div></div><div class="tpe-flex tpe-w-full tpe-justify-center tpe-items-center tpe-text-sm tpe-text-muted-foreground tpe-mb-1 tpe-text-center">Ghi lại và phiên âm chỉ với một vài cú nhấp chuột!</div><button class="tpe-inline-flex tpe-items-center tpe-justify-center tpe-whitespace-nowrap tpe-rounded-md tpe-text-sm tpe-font-medium tpe-transition-colors focus-visible:tpe-outline-none focus-visible:tpe-ring-1 focus-visible:tpe-ring-ring disabled:tpe-pointer-events-none disabled:tpe-opacity-50 tpe-bg-primary tpe-text-primary-foreground dark:text-foreground tpe-shadow hover:tpe-bg-primary/90 tpe-h-9 tpe-px-4 tpe-py-2">Yangilamoq</button></div></div></div><div class="tpe-fixed  tpe-flex tpe-items-end tpe-hidden" style="left: 5%; bottom: 5%;"><div class="tpe-w-[300px] tpe-gap-3 tpe-flex tpe-flex-col tpe-justify-center tpe-items-center"><video class="tpe-w-60 tpe-h-60 tpe-rounded-full tpe-object-cover tpe-hidden tpe-h-[0] tpe-cursor-move" autoplay=""></video><div class="tpe-w-full tpe-cursor-move tpe-flex tpe-items-center tpe-p-[10px] tpe-rounded-full tpe-mb-2 tpe-bg-[#333333] tpe-border-4 border-[#e0e0e0] tpe-justify-center tpe-gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square tpe-w-6 tpe-h-6 tpe-stroke-white tpe-cursor-not-allowed"><rect width="18" height="18" x="3" y="3" rx="2"></rect></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pause tpe-w-6 tpe-h-6 tpe-stroke-white tpe-cursor-not-allowed"><rect x="14" y="4" width="4" height="16" rx="1"></rect><rect x="6" y="4" width="4" height="16" rx="1"></rect></svg><div class="tpe-text-[#e0e0e0] tpe-select-none tpe-font-semibold tpe-text-lg -tpe-ml-1 tpe-h-full tpe-items-center tpe-flex">00:00</div><div class="tpe-w-[2px] tpe-h-[28px] tpe-bg-[#e0e0e0] tpe-flex"></div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash tpe-w-6 tpe-h-6 tpe-stroke-white tpe-cursor-not-allowed"><path d="M3 6h18"></path><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path></svg></div></div></div></div></div></div></template></plasmo-csui><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>SequenceDiagram.org - UML Sequence Diagram Online Tool</title>
+    <meta name="description" content="Free sequence diagram online tool. Create sequence diagrams using textual notation or draw quickly via Drag and Drop with an easy to use interface.">
+    <meta name="keywords" content="sequence diagram tool,sequence diagram online,online sequence diagram,web sequence diagrams,sequence diagram,free,sequence diagram example,时序图,Diagrama de secuencia,Diagramme de séquence,Diagrama de sequência,シーケンス図,在线时序图">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="https://sequencediagram.org/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://sequencediagram.org/favicon.ico" type="image/x-icon">
+
+    <meta property="og:image" content="https://sequencediagram.org/assets/icon128x128.png">
+    <meta property="og:url" content="https://sequencediagram.org">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SequenceDiagram.org - UML Sequence Diagram Online Tool">
+    <meta property="og:description" content="Free sequence diagram online tool. Create sequence diagrams using textual notation or draw quickly via Drag and Drop with an easy to use interface.">
+
+    <script src="./SequenceDiagram.org - UML Sequence Diagram Online Tool_files/lz-string.min.js"></script>
+
+    <script src="./SequenceDiagram.org - UML Sequence Diagram Online Tool_files/canvas2svg.min.js"></script>
+
+    <script src="./SequenceDiagram.org - UML Sequence Diagram Online Tool_files/rbush.min.js"></script>
+
+    <script src="./SequenceDiagram.org - UML Sequence Diagram Online Tool_files/purify.min.js"></script>
+
+    <link rel="stylesheet" href="./SequenceDiagram.org - UML Sequence Diagram Online Tool_files/codemirror.css">
+    <link rel="stylesheet" href="./SequenceDiagram.org - UML Sequence Diagram Online Tool_files/show-hint.css">
+    <link rel="stylesheet" href="./SequenceDiagram.org - UML Sequence Diagram Online Tool_files/dialog.css">
+    <link rel="stylesheet" href="./SequenceDiagram.org - UML Sequence Diagram Online Tool_files/matchesonscrollbar.css">
+    <script src="./SequenceDiagram.org - UML Sequence Diagram Online Tool_files/codemirror.all.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./SequenceDiagram.org - UML Sequence Diagram Online Tool_files/index.css">
+    <link rel="stylesheet" href="./SequenceDiagram.org - UML Sequence Diagram Online Tool_files/print.css" type="text/css" media="print">
+    <script src="./SequenceDiagram.org - UML Sequence Diagram Online Tool_files/all.min.js"></script>
+<style>
+      body.shimeji-pinned iframe {
+        pointer-events: none;
+      }
+      body.shimeji-select-ie {
+        cursor: cell !important;
+      }
+      #shimeji-contextMenu::-webkit-scrollbar {
+        width: 6px;
+      }
+      #shimeji-contextMenu::-webkit-scrollbar-thumb {
+        background-color: rgba(30,30,30,0.6);
+        border-radius: 3px;
+      }
+      #shimeji-contextMenu::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+    </style><meta name="shimejiBrowserExtensionId" content="gohjpllcolmccldfdggmamodembldgpc" data-version="2.0.5"></head>
+
+<body>
+<div id="top">
+    <img id="logo" alt="SequenceDiagram.org" src="./SequenceDiagram.org - UML Sequence Diagram Online Tool_files/logo24x24.png">
+    <div id="activeFile">
+        <span id="activeFileStatus"><label for="activeFileNameChange"></label><input id="activeFileNameChange" pattern="^[\p{L}\p{N} ._\-\(\)\[\]&amp;!,]{1,100}$" style="display: none;"><span id="activeFileNameStatus" style="display: inline;">Untitled</span> [<span id="activeFileStorageStatus">Not saved</span>]</span>
+    </div>
+</div>
+<div id="topRight">
+    <div id="menuButtonView" class="menuButton menuHighlight">View</div>
+    <div id="menuButtonSettings" class="menuButton menuHighlight nonPresentation">Settings</div>
+
+    <!--donations-start-->
+    <div id="menuButtonDonations" class="menuButton menuHighlight nonPresentation">Donations</div>
+    <!--donations-end-->
+
+    <div id="menuButtonHelp" class="menuButton menuHighlight nonPresentation">Help</div>
+
+    <div id="menuView" class="menuContent" style="display: none;">
+        <div id="menuViewPresentationMode" class="menuRow menuHighlight" title="Hides menus, button, and text editor">
+            <span id="presentationModeCheckbox">☐</span>&nbsp;Presentation Mode (Ctrl+M)
+        </div>
+        <div id="menuViewParticipantOverlay" class="menuRow menuHighlight" title="Displays the participants in the top of the diagram as an overlay when they are scrolled out of view">
+            <span id="participantOverlayCheckbox">☑</span>&nbsp;Participant Overlay On Scroll
+        </div>
+        <div id="menuViewReadOnlyPresentationMode" class="menuRow menuHighlight" title="When in presentation mode, disables editing the diagram using the mouse and instead allows to grab the diagram and
+                    move it around instead of scrolling">
+            <span id="readOnlyPresentationModeCheckbox">☐</span>&nbsp;Read Only Presentation Mode
+        </div>
+        <div id="menuViewShrinkToFit" class="menuRow menuHighlight" title="Scales the diagram to fit the page when it grows larger than the available space (works in presentation mode and edit mode)">
+            <span id="shrinkToFitCheckbox">☐</span>&nbsp;Shrink to Fit
+        </div>
+    </div>
+    <div id="menuSettings" class="menuContent right" style="display: none;">
+        <div class="menuRow">
+            <fieldset>
+                <legend>Default (Ctrl+S / Ctrl+O) Storage</legend>
+                <div id="menuSettingsDefaultStorageFileSystem" class="menuRow menuHighlight">
+                    <span id="defaultStorageRadioFileSystem">○</span>&nbsp;File System
+                </div>
+                <!--googledrive-start-->
+                <div id="menuSettingsDefaultStorageGoogleDrive" class="menuRow menuHighlight">
+                    <span id="defaultStorageRadioGoogleDrive">○</span>&nbsp;Google Drive
+                </div>
+                <div id="menuSettingsDefaultStorageGoogleDriveRootFolder" class="menuRow menuHighlight">
+                    <span id="defaultStorageRadioGoogleDriveRootFolder">○</span>&nbsp;Google Drive Root Folder
+                </div>
+                <!--googledrive-end-->
+                <!--onedrive-start-->
+                <div id="menuSettingsDefaultStorageOneDrive" class="menuRow menuHighlight">
+                    <span id="defaultStorageRadioOneDrive">○</span>&nbsp;OneDrive
+                </div>
+                <div id="menuSettingsDefaultStorageWebStorage" class="menuRow menuHighlight">
+                    <span id="defaultStorageRadioWebStorage">○</span>&nbsp;Web Storage (localStorage)
+                </div>
+                <!--onedrive-end-->
+                <div id="menuSettingsDefaultStorageLocalDisk" class="menuRow menuHighlight">
+                    <span id="defaultStorageRadioLocalDisk">◉</span>&nbsp;Download Folder
+                </div>
+            </fieldset>
+        </div>
+        <div id="menuSettingsAlertForUnsavedChanges" class="menuRow menuHighlight">
+            <span id="alertForUnsavedChangesCheckbox">☑</span>&nbsp;Alert for unsaved changes
+        </div>
+        <div id="menuSettingsAutosave" class="menuRow menuHighlight" title="Only performed when the source text has changed since last save">
+            <span id="autosaveCheckbox">☑</span>&nbsp;Autosave every 10 min
+        </div>
+        <div id="menuSettingsSynchronizeFilenameWithTitle" class="menuRow menuHighlight" title="Changes to title triggers the save as dialog to be displayed since any link to existing file is removed when it is changed">
+            <span id="synchronizeFilenameWithTitleCheckbox">☐</span>&nbsp;Synchronize filename with title in diagram
+        </div>
+        <div id="menuSettingsWordWrapSourceText" class="menuRow menuHighlight">
+            <span id="wordWrapSourceTextCheckbox">☑</span>&nbsp;Word wrap source text
+        </div>
+        <div id="menuSettingsResetWorkAreaLayout" class="menuRow menuHighlight">
+           <span>↺</span>&nbsp;Reset work area layout
+        </div>
+    </div>
+
+    <!--donations-start-->
+    <div id="menuDonations" class="menuContent right" style="display: none;">
+        <div class="menuRow">
+            <table class="menuTable">
+                <tbody><tr>
+                    <td>Patreon ($1/month)&nbsp;&nbsp;</td>
+                    <td class="right">
+                        <a class="sc-VigVT gTXqXb" href="https://www.patreon.com/bePatron?u=15407613" target="_blank" rel="noopener">
+                            <div class="sc-bZQynM fKGKmg">
+                                <div class="sc-bZQynM fSJOpK">
+                                    <div class="eren1a-0 fysOvk">
+                                    <span class="s126e0qj-0 jlyAAk">
+                                        <svg viewBox="0 0 569 546" version="1.1" xmlns="http://www.w3.org/2000/svg"><g><circle data-color="1" id="Oval" cx="362.589996" cy="204.589996" r="204.589996"></circle><rect data-color="2" id="Rectangle" x="0" y="0" width="100" height="545.799988"></rect></g></svg>
+                                    </span>
+                                    </div>
+                                    <div class="mr4juj-0 jQSwUz"></div>
+                                    <div class="button-text">Become a patron</div>
+                                </div>
+                            </div>
+                        </a>
+                    </td>
+                </tr>
+            </tbody></table>
+        </div>
+    </div>
+    <!--donations-end-->
+
+    <div id="menuHelp" class="menuContent right" style="display: none;">
+        <div id="menuHelpInstructionsNewWindow" class="menuRow menuHighlight">
+            Instructions (new window)
+        </div>
+        <div id="menuHelpInstructionsModalPopup" class="menuRow menuHighlight">
+            Instructions
+        </div>
+        <div id="menuHelpPlatformsAndApi" class="menuRow menuHighlight">
+            Platforms &amp; API
+        </div>
+        <div id="menuHelpPrivacyPolicy" class="menuRow menuHighlight">
+            Privacy Policy
+        </div>
+        <div id="menuHelpTermsOfService" class="menuRow menuHighlight">
+            Terms of Service
+        </div>
+        <div id="menuHelpReleaseNotesNewWindow" class="menuRow menuHighlight">
+            Release Notes
+        </div>
+        <div id="menuHelpAbout" class="menuRow menuHighlight">
+            About
+        </div>
+        <!--lic-->
+    </div>
+</div>
+
+<div id="notification"><span id="notificationMessage"></span><img id="notificationSpinner" src="./SequenceDiagram.org - UML Sequence Diagram Online Tool_files/spinner-1s-64px.svg" title="loading"><span id="notificationCloseButton">×</span></div>
+
+<div id="actions" style="left: 0px; display: block;">
+    <img id="dragToMove" class="actionButton" src="./SequenceDiagram.org - UML Sequence Diagram Online Tool_files/move.svg" title="move work area">
+    <img id="newDiagram" class="actionButton" src="./SequenceDiagram.org - UML Sequence Diagram Online Tool_files/new.svg" title="new diagram">
+    <img id="openButton" class="actionButton" src="./SequenceDiagram.org - UML Sequence Diagram Online Tool_files/open.svg" title="open source text">
+    <img id="saveButton" class="actionButton" src="./SequenceDiagram.org - UML Sequence Diagram Online Tool_files/save.svg" title="save source text">
+    <img id="exportButton" class="actionButton" src="./SequenceDiagram.org - UML Sequence Diagram Online Tool_files/export01.svg" title="export diagram">
+    <hr class="separator">
+    <img id="addParticipant" class="actionButton" src="./SequenceDiagram.org - UML Sequence Diagram Online Tool_files/participant01.svg" title="add participant">
+    <img id="zoomIn" class="actionButton" src="./SequenceDiagram.org - UML Sequence Diagram Online Tool_files/zoomin.svg" title="zoom in">
+    <img id="zoomOut" class="actionButton" src="./SequenceDiagram.org - UML Sequence Diagram Online Tool_files/zoomout.svg" title="zoom out">
+</div>
+
+<div id="source" style="left: 50px;"><div id="handleRight"></div><div class="CodeMirror cm-s-default CodeMirror-wrap" translate="no" style="clip-path: inset(0px); width: 450px;"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 170px; left: 397.219px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; min-height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true" style="width: 18px; visibility: hidden;"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true" style="height: 18px; visibility: hidden;"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 40px; margin-bottom: 0px; border-right-width: 50px; min-height: 488px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre class="CodeMirror-line-like">x</pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>23</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors" style=""><div class="CodeMirror-cursor" style="left: 356.219px; top: 165px; height: 15px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation" style=""><div style="position: relative;" class=""><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -40px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div><div class="CodeMirror-gutter-elt" style="left: 29px; width: 10px;"><div style="color: red;">⊠</div></div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">sequenceDiagram</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -40px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def"> &nbsp;  participant</span><span class="cm-tag"> Bệnh_nhân</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -40px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def"> &nbsp;  participant</span><span class="cm-tag"> Tiếp_đón</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -40px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def"> &nbsp;  participant</span><span class="cm-tag"> Bác_sĩ</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -40px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def"> &nbsp;  participant</span><span class="cm-tag"> Kế_toán</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -40px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-def"> &nbsp;  participant</span><span class="cm-tag"> Hệ_thống_DL</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -40px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;" class=""><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -40px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">8</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag"> &nbsp;  Bệnh_nhân</span><span class="cm-keyword">-&gt;&gt;</span><span class="cm-tag">Tiếp_đón</span><span class="cm-variable">: Cung cấp thông tin khám bệnh và lấy số thứ tự đăng ký kh</span>ám</span></pre></div><div style="position: relative;" class=""><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -40px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">9</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag"> &nbsp;  Tiếp_đón</span><span class="cm-keyword">-&gt;&gt;</span><span class="cm-tag">Hệ_thống_DL</span><span class="cm-variable">: Nhập thông tin bệnh nh</span>ân</span></pre></div><div style="position: relative;" class="CodeMirror-activeline"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -40px; width: 40px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" aria-hidden="true" style="left: -40px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">10</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag"> &nbsp;  Tiếp_đón</span><span class="cm-keyword">-&gt;&gt;</span><span class="cm-tag">Bệnh_nhân</span><span class="cm-variable">: Cung cấp số thứ t</span>ự </span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -40px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">11</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag"> &nbsp;  Bệnh_nhân</span><span class="cm-keyword">-&gt;&gt;</span><span class="cm-tag">Tiếp_đón</span><span class="cm-variable">: Xác nhận gói dịch </span>vụ</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -40px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">12</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag"> &nbsp;  Tiếp_đón</span><span class="cm-keyword">-&gt;&gt;</span><span class="cm-tag">Kế_toán</span><span class="cm-variable">: Gửi yêu cầu lập hóa đ</span>ơn</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -40px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">13</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag"> &nbsp;  Kế_toán</span><span class="cm-keyword">-&gt;&gt;</span><span class="cm-tag">Hệ_thống_DL</span><span class="cm-variable">: Lập bảng kê chi phí khám bệ</span>nh</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -40px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">14</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag"> &nbsp;  Kế_toán</span><span class="cm-keyword">-&gt;&gt;</span><span class="cm-tag">Bệnh_nhân</span><span class="cm-variable">: Xác nhận thanh to</span>án</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -40px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">15</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag"> &nbsp;  Bệnh_nhân</span><span class="cm-keyword">-&gt;&gt;</span><span class="cm-tag">Bác_sĩ</span><span class="cm-variable">: Đến khám theo lịch h</span>ẹn</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -40px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">16</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag"> &nbsp;  Bác_sĩ</span><span class="cm-keyword">-&gt;&gt;</span><span class="cm-tag">Hệ_thống_DL</span><span class="cm-variable">: Lập phiếu yêu cầu xét nghiệm, chẩn đoán hình ả</span>nh</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -40px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">17</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag"> &nbsp;  Bệnh_nhân</span><span class="cm-keyword">-&gt;&gt;</span><span class="cm-tag">Tiếp_đón</span><span class="cm-variable">: Thực hiện xét nghiệm, chẩn đoán hình ả</span>nh</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -40px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">18</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag"> &nbsp;  Tiếp_đón</span><span class="cm-keyword">-&gt;&gt;</span><span class="cm-tag">Hệ_thống_DL</span><span class="cm-variable">: Cập nhật kết quả xét nghi</span>ệm</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -40px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">19</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag"> &nbsp;  Hệ_thống_DL</span><span class="cm-keyword">-&gt;&gt;</span><span class="cm-tag">Bác_sĩ</span><span class="cm-variable">: Gửi kết quả xét nghi</span>ệm</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -40px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">20</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag"> &nbsp;  Bác_sĩ</span><span class="cm-keyword">-&gt;&gt;</span><span class="cm-tag">Bệnh_nhân</span><span class="cm-variable">: Tư vấn, lập phác đồ điều trị, kê đơn thu</span>ốc</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -40px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">21</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag"> &nbsp;  Bác_sĩ</span><span class="cm-keyword">-&gt;&gt;</span><span class="cm-tag">Hệ_thống_DL</span><span class="cm-variable">: Cập nhật phác đồ điều trị và đơn thu</span>ốc</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -40px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">22</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag"> &nbsp;  Bệnh_nhân</span><span class="cm-keyword">-&gt;&gt;</span><span class="cm-tag">Tiếp_đón</span><span class="cm-variable">: Nhận đơn thuốc, kết thúc quy trì</span>nh</span></pre></div><div class="" style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -40px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">23</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 50px; width: 1px; border-bottom: 0px solid transparent; top: 488px;"></div><div class="CodeMirror-gutters" style="height: 538px; left: 0px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div><div class="CodeMirror-gutter errors"></div></div></div><div style="position: absolute; right: 0px; top: 0px; z-index: 7; pointer-events: none;"></div></div></div>
+
+<canvas id="diagramCanvas" class="canvas" width="1188" height="868" style="left: 510px;">
+    Device not supported, use firefox or chrome or safari or ie 10+
+</canvas>
+<canvas id="participantCanvas" class="canvas" width="1188" height="62" style="left: 510px; display: block; top: 192px;"></canvas>
+<canvas id="interactionCanvas" class="canvas" width="1188" height="868" style="left: 510px; cursor: auto;"></canvas>
+<div id="scrollBox" style="left: 510px; width: 1188.73px; height: 868.505px;"></div>
+
+<div id="entryEditor" style="display: none;">
+    <div id="entryEditorTop">&nbsp;<span id="entryEditorCloseIcon" title="close">✕</span></div>
+    <div id="participantEdit" style="display: none;">
+        Participant alias<br>
+        <input id="participantAliasInput" pattern="^[\p{L}\p{M}\p{N}\p{P}\p{Z}\p{S}]{1,100}$"><br><br>
+        Participant long name<br>
+    </div>
+    <textarea id="entryEditorTextArea"></textarea>
+    <div><span class="popupDialogButtons">
+        <button id="entryEditorCancel">Cancel</button>
+        <button id="entryEditorUpdate">Update (Ctrl + Enter)</button>
+    </span></div>
+</div>
+
+<div id="openSourceMenu" class="actionMenu" style="display: none;">
+    <span class="openSaveLabel">File System</span><br>
+    <button id="openButtonFileSystem">Open</button>
+    <!--googledrive-start-->
+    <br>
+    <br>
+    <span class="openSaveLabel">Google Drive&nbsp;&nbsp;<a href="https://gsuite.google.com/marketplace/app/sequencediagramorg/128530462773" target="_blank" title="SequenceDiagramOrg app is available for opening diagrams directly from inside Google Drive">G Suite Marketplace</a></span><br>
+    <button id="openButtonGoogleDrive">Open</button>
+    <!--googledrive-end-->
+    <!--onedrive-start-->
+    <br>
+    <br>
+    <span class="openSaveLabel">OneDrive</span><br>
+    <button id="openButtonOneDrive">Open</button>
+    <!--onedrive-end-->
+    <br>
+    <br>
+    <span class="openSaveLabel">Web Storage (localStorage)</span><br>
+    <button id="openButtonWebStorage">Open</button>
+    <br>
+    <br>
+    <span class="openSaveLabel">File Reader (for legacy browsers)</span><br>
+    <form>
+        <input id="openButtonLocalDisk" type="file">
+    </form>
+</div>
+
+<div id="saveSourceMenu" class="actionMenu" style="display: none;">
+    <span class="openSaveLabel">File Name</span><br>
+    <label for="fileName"></label><input id="fileName" type="text" size="40" pattern="^[\p{L}\p{N} ._\-\(\)\[\]&amp;!,]{1,100}$"><span class="smallText">.txt</span>
+    <br>
+    <br>
+    <span class="openSaveLabel">File System</span><br>
+    <button id="saveButtonFileSystem">Save</button>
+    &nbsp;&nbsp;
+    <button id="saveAsButtonFileSystem">Save As...</button>
+    <!--googledrive-start-->
+    <br>
+    <br>
+    <span class="openSaveLabel">Google Drive</span><br>
+    <button id="saveButtonGoogleDrive">Save</button>
+    &nbsp;&nbsp;
+    <button id="saveInRootButtonGoogleDrive">Save in Root Folder</button>
+    <!--googledrive-end-->
+    <!--onedrive-start-->
+    <br>
+    <br>
+    <span class="openSaveLabel">OneDrive</span><br>
+    <button id="saveButtonOneDrive">Save</button>
+    <!--onedrive-end-->
+    <br>
+    <br>
+    <span class="openSaveLabel">Web Storage (localStorage)</span><br>
+    <button id="saveButtonWebStorage">Save</button>
+    <br>
+    <br>
+    <span class="openSaveLabel">Download Folder</span><br>
+    <button id="saveButtonLocalDisk">Download</button>
+</div>
+
+<div id="exportDiagramMenu" class="actionMenu" style="display: none;">
+    <span class="openSaveLabel">File Name</span><br>
+    <label for="fileNameExport"></label><input id="fileNameExport" type="text" size="40" pattern="^[\p{L}\p{N} ._\-\(\)\[\]&amp;!,]{1,100}$"><span class="smallText">.xyz</span>
+    <br>
+    <br>
+    <span class="openSaveLabel">SVG Image File (vector image with embedded source text)</span><br>
+    <button id="exportButtonSvg">Export To...</button>
+    &nbsp;&nbsp;
+    <button id="downloadButtonSvg">Download</button>
+    <br>
+    <br>
+    <span class="openSaveLabel">PNG Image File (at current zoom level)</span><br>
+    <button id="exportButtonPng">Export To...</button>
+    &nbsp;&nbsp;
+    <a href="https://sequencediagram.org/#" id="downloadButtonPngLink"><button id="downloadButtonPng">Download</button></a>
+    <br>
+    <br>
+    <span class="openSaveLabel">PNG Image for Right Click Copy (at current zoom level)</span><br>
+    <button id="exportButtonCopyPaste">Render</button>
+    <br>
+    <br>
+    <span class="openSaveLabel">URL to Share</span><br>
+    <button id="exportButtonUrl">Create</button>
+</div>
+
+<div id="cover">
+    <div class="popupDialog" id="imageSavePopup">
+        <div class="popupHead"><span class="popupTitle">Export Diagram</span><span class="popupCloseIcon" title="close">✕</span>
+        </div>
+        <div class="popupDialogInner">
+            Right click and copy image or Save as...
+            <br>
+            <div id="imageDiv">
+            </div>
+        </div>
+    </div>
+
+    <div class="popupDialog" id="infoPopup">
+        <div class="popupHead"><span class="popupTitle">About</span><span class="popupCloseIcon" title="close">✕</span></div>
+        <div class="popupDialogInner">
+            <p class="infoText">SequenceDiagram.org is an online tool / software for creating UML sequence diagrams. Founded in 2014 with the purpose to improve
+                the efficiency when creating and working with sequence diagrams by combining text notation scripting and drawing by clicking and dragging in the
+                same model.</p>
+
+            <p class="infoText">All parsing, processing, and drawing is done client side. The benefit of this is that SequenceDiagram.org is fast and convenient to work with;
+                it also doesn't transfer your diagram data over the Internet like many other sequence diagram tools on the market. This also means that it is
+                possible to work with the tool offline.</p>
+
+            <p class="infoText">The tool is developed, maintained, and used by people who create a lot of sequence diagrams in their daily work. If you have any question / comments
+                / suggestions / bugs please raise a request in our <a href="https://sequencediagramorg.atlassian.net/servicedesk/customer/portals" target="_blank">Help Center</a>
+                or send email to <a href="mailto:info@sequencediagram.org">info@sequencediagram.org</a>. The more feedback we get the better we can prioritize.</p><br>
+
+            <h1 class="infoHeadline">FAQ</h1>
+            <h2 class="infoFAQ">Privacy and data protection information</h2>
+            <p class="infoText">The tool itself does not collect data, however, services it relies on, such as Content Delivery Network,
+                hosting, and cloud storage, do. See <a href="https://sequencediagram.org/privacypolicy.html">privacy policy</a> for details.</p><br>
+
+            <h2 class="infoFAQ">Are diagrams/scripts created using SequenceDiagram.org subject to any license?</h2>
+            <p class="infoText">No license is imposed by SequenceDiagram.org on the generated output.
+                However, like with all images containing text, the fonts used might. The default font used in diagrams is the default sans-serif font selected by
+                your browser. You can specify a different font using the fontfamily keyword, see help for more information.</p><br>
+
+            <h2 class="infoFAQ">On which platforms is SequenceDiagram.org available?</h2>
+            <p class="infoText">See menu "Help" -&gt; "Platforms &amp; API"</p><br>
+
+            <h2 class="infoFAQ">How do I generate a PDF of my sequence diagram?</h2>
+            <p class="infoText">Zoom to a chosen level in the editor and Print to PDF from your browser. The print css makes sure to only show the diagram on the
+                page.</p><br>
+
+            <h2 class="infoFAQ">Are there any example sequence diagrams?</h2>
+            <p class="infoText">Yes, clicking the help menu and selecting "Instructions" will show examples of all possible diagram elements. A copy icon is
+                available for copying the source text.<br>You can also ask ChatGPT to "Create a detailed sequence diagram for TLS 1.3 handshake using textual sequencediagram.org syntax"</p><br>
+
+            <h2 class="infoFAQ">Is the codebase of SequenceDiagram.org open source?</h2>
+            <p class="infoText">No, the codebase is currently not available under any open source license</p><br>
+
+            <h2 class="infoFAQ">What libraries are used by SequenceDiagram.org?</h2>
+            <p class="infoText">
+            </p><ul>
+                <li><a href="https://github.com/pieroxy/lz-string">lz-string</a> is used to create URLs for sharing sequence diagrams.
+                    <a href="https://sequencediagram.org/libs/lz-string-LICENSE.txt">LICENSE</a></li>
+                <li><a href="https://github.com/gliffy/canvas2svg">Canvas2Svg</a> is used to export the diagram into SVG file format.
+                    <a href="https://sequencediagram.org/libs/canvas2svg-LICENSE.txt">LICENSE</a></li>
+                <li><a href="https://codemirror.net/">CodeMirror</a> is used as the text editor.
+                    <a href="https://sequencediagram.org/libs/codemirror-LICENSE.txt">LICENSE</a></li>
+                <li><a href="https://fontawesome.io/">Font Awesome</a> is used to provide icons for the icon participants.
+                    <a href="https://sequencediagram.org/libs/fontawesome-webfont-LICENSE.txt">LICENSE</a></li>
+                <li><a href="https://pictogrammers.com/">Material Design Icons</a> is used to provide icons for the icon participants. Color of the icons is altered based on input.
+                    <a href="https://sequencediagram.org/libs/materialdesign/LICENSE.txt">LICENSE</a></li>
+                <li><a href="https://fontawesome.com/">Font Awesome 5 Free</a> is used to provide icons for the icon participants.
+                <a href="https://sequencediagram.org/libs/fontawesome5free-LICENSE.txt">LICENSE</a></li>
+                <li><a href="https://fontawesome.com/">Font Awesome 6 Free</a> is used to provide icons for the icon participants. Color of the icons is altered based on input.
+                <a href="https://sequencediagram.org/libs/fontawesome/LICENSE.txt">LICENSE</a></li>
+                <li><a href="https://github.com/mourner/rbush">RBush</a> is used for collision detection calculations for onmousemove events.
+                    <a href="https://sequencediagram.org/libs/rbush-LICENSE.txt">LICENSE</a></li>
+                <li><a href="https://github.com/cure53/DOMPurify">DomPurify</a> is used as a safeguard when embedding SVG files from Font Awesome and Material Design Icons.
+                    <a href="https://sequencediagram.org/libs/rbush-LICENSE.txt">LICENSE</a></li>
+                <li><a href="https://github.com/AzureAD/microsoft-authentication-library-for-js">MSAL.js</a> from Microsoft is used for authentication towards
+                    Microsoft services.
+                </li>
+                <li><a href="https://docs.microsoft.com/en-us/onedrive/developer/controls/file-pickers/js-v72/?view=odsp-graph-online">OneDrive.js</a> from
+                    Microsoft is used for file picker for OneDrive and SharePoint.
+                </li>
+                <li><a href="https://developers.google.com/identity/gsi/web/guides/overview">gsi/client</a> and <a href="https://apis.google.com/js/api.js">api.js</a> from
+                    Google is used for authentication towards Google services and file picker for Google Drive and Team Drives.
+                </li>
+            </ul>
+            <p class="infoText"><br><i>SequenceDiagram.org and its services are provided by NoSpareTime AB, a private limited company.</i></p><br>
+        </div>
+    </div>
+
+
+    <div class="popupDialog" id="platformsAndApiPopup">
+        <div class="popupHead"><span class="popupTitle">Platforms &amp; API</span><span class="popupCloseIcon" title="close">✕</span></div>
+        <div class="popupDialogInner">
+            <p class="infoText">Below follow descriptions of all available platforms and APIs.</p>
+            <h2 class="infoFAQ">Web</h2>
+            <ul>
+                <li>Link: <a href="https://plugins.jetbrains.com/plugin/23115-sequencediagram-org" target="_blank">SequenceDiagram.org</a></li>
+                <li>This is where you are right now.</li>
+            </ul>
+            <h2 class="infoFAQ">Atlassian Confluence Cloud</h2>
+            <ul>
+                <li>Atlassian Marketplace link: <a href="https://marketplace.atlassian.com/apps/1228516/sequencediagram-org-for-confluence?hosting=cloud&amp;tab=overview" target="_blank">SequenceDiagram.org for Confluence</a></li>
+                <li>Enables creating, editing, and saving sequence diagrams directly in Confluence.</li>
+            </ul>
+            <h2 class="infoFAQ">Intellij IDEA</h2>
+            <ul>
+                <li>JetBrains Marketplace link: <a href="https://plugins.jetbrains.com/plugin/23115-sequencediagram-org" target="_blank">SequenceDiagram.org Plugin</a></li>
+                <li>Enables creating, editing, and saving SequenceDiagram.org files inside Intellij.</li>
+                <li>Enables generating sequence diagram from Java code.</li>
+                <li>Select this for an offline/desktop version.</li>
+            </ul>
+            <h2 class="infoFAQ" id="onPremDocker">On-Prem (Docker)</h2>
+            <ul>
+                <li>The SequenceDiagram.org web application for internal use within a company (may be deployed on-prem or in public cloud but access must be restricted the company only).</li>
+                <li>The Docker image is built using <a href="https://github.com/caddyserver/caddy" target="_blank">Caddy</a> as the base image. <a href="https://hub.docker.com/_/caddy" target="_blank">Mount a new Caddyfile</a> to configure <a href="https://caddyserver.com/docs/automatic-https" target="_blank">HTTPS</a> or add additional Docker layers as you see fit.</li>
+                <li>The cost is $900 and includes a perpetual license and one year of free updates (i.e. you can keep using the software indefinitely but the license must be renewed to request updated versions after one year has passed).</li>
+                <li>For any questions or to order, please create a Support request with medium priority in the <a href="https://sequencediagramorg.atlassian.net/servicedesk/customer/portals" target="_blank">Help Center</a>
+                    or send email to <a href="mailto:info@sequencediagram.org">info@sequencediagram.org</a>.</li>
+            </ul>
+            <h2 class="infoFAQ">JavaScript API (for Selenium and similar tooling)</h2>
+            <ul>
+                <li>Provides the possibility to generate diagrams from local machine or Jenkins using Python and <a href="https://github.com/SeleniumHQ/docker-selenium/blob/trunk/README.md" target="_blank">Selenium Grid Standalone with Chrome</a> and similar tooling</li>
+                <li>The API is available on SequenceDiagram.org and in <a href="https://sequencediagram.org/#onPremDocker">On-Prem (Docker)</a>.</li>
+                <li>How-to-guide
+                    <ol>
+                        <li>Run the <a href="https://hub.docker.com/r/selenium/standalone-chrome" target="_blank">selenium/standalone-chrome</a> container<br>
+                            <div class="codeMonoCaption">
+                                <div class="codeMono">docker run -d -p 4444:4444 -e SE_START_XVFB=false -e SE_NODE_MAX_SESSIONS=2 -e SE_NODE_SESSION_TIMEOUT=30 --shm-size="2g" selenium/standalone-chrome:4.19.1-20240402</div>
+                            </div>
+                        </li>
+                        <li>Install the Selenium Python package<br>
+                            <div class="codeMonoCaption">
+                                <div class="codeMono">pip install selenium</div>
+                            </div>
+                        </li>
+                        <li>Copy the following code into a Python file named "diagramtest.py"<br>
+                            <div class="codeMonoCaption">
+                                <div class="codeMono">from selenium import webdriver
+                                    import base64
+
+                                    # connect to the Selenium/standalone-chrome container
+                                    options = webdriver.ChromeOptions()
+                                    options.add_argument("--headless=new")
+                                    driver = webdriver.Remote(command_executor='http://localhost:4444', options=options)
+
+                                    # load https://sequencediagram.org or URL of the Docker On-Prem version of SequenceDiagram.org
+                                    driver.get("https://sequencediagram.org")
+
+                                    # get diagram source text
+                                    diagram_source = "title Test\nnote over A: I'm a note"
+
+                                    # generate PNG Data URL
+                                    png_data_url = driver.execute_async_script(
+                                    &nbsp;&nbsp;"const callback = arguments[arguments.length - 1];" +
+                                    &nbsp;&nbsp;"SEQ.api.generatePngDataUrl(arguments[0], callback)",
+                                    &nbsp;&nbsp;diagram_source)
+
+                                    # write to a PNG image file
+                                    png_base64_data = png_data_url.split(",")[1]
+                                    png_image_data = base64.b64decode(png_base64_data)
+                                    with open("result.png", "wb") as f:
+                                    &nbsp;&nbsp;f.write(png_image_data)
+
+                                    # generate SVG Data URL
+                                    svg_data_url = driver.execute_async_script(
+                                    &nbsp;&nbsp;"const callback = arguments[arguments.length - 1];" +
+                                    &nbsp;&nbsp;"SEQ.api.generateSvgDataUrl(arguments[0], callback)",
+                                    &nbsp;&nbsp;diagram_source)
+
+                                    # write to an SVG image file
+                                    svg_base64_data = svg_data_url.split(",")[1]
+                                    svg_image_data = base64.b64decode(svg_base64_data)
+                                    with open("result.svg", "wb") as f:
+                                    &nbsp;&nbsp;f.write(svg_image_data)
+
+                                    print('Diagrams result.png and result.svg generated and saved to disk')
+                                    driver.quit()
+                                </div>
+                            </div>
+                        </li>
+                        <li>Run the diagramtest.py script to generate diagram image files in the current folder (result.png and result.svg)<br>
+                            <div class="codeMonoCaption">
+                                <div class="codeMono">python3 diagramtest.py</div>
+                            </div>
+                        </li>
+                        <li>Feel free to send a question if you ran into any issues (if you don't want to use Python, use any other <a href="https://www.selenium.dev/documentation/" target="_blank">Selenium-supported language</a>)</li>
+                    </ol>
+                </li>
+            </ul>
+            <h2 class="infoFAQ">Google Drive</h2>
+            <ul>
+                <li>Google Workspace Marketplace link: <a href="https://workspace.google.com/marketplace/app/sequencediagramorg/128530462773" target="_blank">SequenceDiagramOrg App</a></li>
+                <li>Enables the direct opening of SequenceDiagram.org files from Google Drive.</li>
+            </ul>
+            <p></p>
+        </div>
+    </div>
+
+    <div class="popupDialog" id="shareUrlPopup">
+        <div class="popupHead"><span class="popupTitle">Share Link</span><span class="popupCloseIcon" title="close">✕</span></div>
+        <div class="popupDialogInner">
+            <p>Copy a link and share it</p>
+            <p>&nbsp;</p>
+            <table class="center">
+                <tbody><tr>
+                    <td>Default:&nbsp;&nbsp;</td>
+                    <td><textarea id="rawLinkCompressed" class="rawLink"></textarea></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;<br>&nbsp;</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Presentation Mode:&nbsp;&nbsp;</td>
+                    <td><textarea id="rawLinkPresentationModeReadOnlyCompressed" class="rawLink"></textarea></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;<br>&nbsp;</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Presentation Mode with Shrink to Fit:&nbsp;&nbsp;</td>
+                    <td><textarea id="rawLinkPresentationModeReadOnlyShrinkToFitCompressed" class="rawLink"></textarea></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;<br>&nbsp;</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>URI Encoded:&nbsp;&nbsp;</td>
+                    <td><textarea id="rawLinkUriEncoded" class="rawLink"></textarea></td>
+                </tr>
+            </tbody></table>
+        </div>
+    </div>
+
+    <div class="popupDialog" id="webStoragePopup">
+        <div class="popupHead"><span class="popupTitle">Web Storage (localStorage)</span><span class="popupCloseIcon" title="close">✕</span></div>
+        <div class="popupDialogInnerWithFooter">
+            <table id="webStorageDiagramTable">
+                <thead>
+                <tr>
+                    <th id="toggleWebStorageSelection">☐</th>
+                    <th>Name</th>
+                    <th>Modified</th>
+                    <th>Size</th>
+                </tr>
+                </thead>
+                <tbody id="webStorageDiagramTableTBody">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="popupDialogBottom">
+                <span class="popupDialogButtons">
+                    <button id="webStoragePopupCancel">Cancel</button>
+                    <button id="webStorageDelete">Delete</button>
+                    <button id="webStorageOpen">Open</button>
+                </span>
+        </div>
+    </div>
+
+    <div class="popupDialog" id="instructionsPopup">
+        <div class="popupHead">
+            <span class="popupTitle">Instructions</span><span class="popupCloseIcon" title="close">✕</span>
+        </div>
+        <div class="popupDialogInnerIFrame">
+            <iframe id="instructionsIFrame" class="popupIFrame" frameborder="0" src="./SequenceDiagram.org - UML Sequence Diagram Online Tool_files/saved_resource.html"></iframe>
+        </div>
+    </div>
+
+    <div class="popupDialog" id="privacyPolicyPopup">
+        <div class="popupHead">
+            <span class="popupTitle">Privacy Policy</span><span class="popupCloseIcon" title="close">✕</span>
+        </div>
+        <div class="popupDialogInnerIFrame">
+            <iframe id="privacyPolicyIFrame" class="popupIFrame" frameborder="0" src="./SequenceDiagram.org - UML Sequence Diagram Online Tool_files/saved_resource(1).html"></iframe>
+        </div>
+    </div>
+
+    <div class="popupDialog" id="termsOfServicePopup">
+        <div class="popupHead">
+            <span class="popupTitle">Terms of Service</span><span class="popupCloseIcon" title="close">✕</span>
+        </div>
+        <div class="popupDialogInnerIFrame">
+            <iframe id="termsOfServiceIFrame" class="popupIFrame" frameborder="0" src="./SequenceDiagram.org - UML Sequence Diagram Online Tool_files/saved_resource(2).html"></iframe>
+        </div>
+    </div>
+</div>
+
+<script src="./SequenceDiagram.org - UML Sequence Diagram Online Tool_files/initMain.js"></script>
+
+
+<div id="shimeji-workArea" style="position: fixed; background: transparent; z-index: 2147483643; width: 100vw; height: 100vh; left: 0px; top: 0px; transform: translate(0px, 0px); pointer-events: none;"></div><div id="highlighter--hover-tools" style="display: none;">
+    <div id="highlighter--hover-tools--container">
+        <div class="highlighter--icon highlighter--icon-copy" title="Copy"></div>
+        <div class="highlighter--icon highlighter--icon-change-color" title="Change Color"></div>
+        <div class="highlighter--icon highlighter--icon-delete" title="Delete"></div>
+    </div>
+</div></body></html>

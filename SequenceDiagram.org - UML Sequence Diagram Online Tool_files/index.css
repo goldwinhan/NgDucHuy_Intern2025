@@ -1,0 +1,785 @@
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('libs/fontawesome-webfont.woff') format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Material Design Icons';
+    src: url('libs/materialdesign/fonts/materialdesignicons-webfont.woff2') format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Font Awesome 5 Brands';
+    font-style: normal;
+    font-weight: 400;
+    src: url("libs/fa-brands-400.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 900;
+    src: url("libs/fa-solid-900.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 400;
+    src: url("libs/fa-regular-400.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Brands';
+    font-style: normal;
+    font-weight: 400;
+    src: url("libs/fontawesome/webfonts/fa-brands-400.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Free';
+    font-style: normal;
+    font-weight: 900;
+    src: url("libs/fontawesome/webfonts/fa-solid-900.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Free';
+    font-style: normal;
+    font-weight: 400;
+    src: url("libs/fontawesome/webfonts/fa-regular-400.woff2") format("woff2");
+}
+
+body {
+    background-color: #f6f6f6;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+a, a:visited {
+    color: #1a1a1a;
+}
+
+a img {
+    border: none;
+    outline: none;
+}
+
+input:invalid {
+    background-color: lightpink;
+}
+
+#top {
+    position: fixed;
+    top: 0;
+    z-index: 200;
+    width: 100%;
+    height: 40px;
+    background-color: #fafafa;
+    border-bottom: solid 1px #aaaaaa;
+}
+
+#menuHelpLicenseNewWindow {
+    font-style: italic;
+}
+
+#logo {
+    position: fixed;
+    padding: 8px;
+    top: 0;
+    left: 0;
+}
+
+#activeFile {
+    position: fixed;
+    top: 0;
+    left: 30px;
+    height: 14px;
+    margin: auto;
+    color: #505050;
+    padding: 13px;
+}
+
+#activeFileStatus {
+    color: #505050;
+    font-size: 0.9em;
+}
+
+#activeFileNameChange {
+    display: none;
+}
+
+#topRight {
+    z-index: 300;
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 0;
+    text-align: right;
+}
+
+#notification {
+    position: fixed;
+    z-index: 1000;
+    top: 45px;
+    padding: 15px 35px 15px 20px;
+    font-size: 0.9em;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: none;
+}
+
+.notificationInfo {
+    background-color: #f8f9fa;
+    color: #343a40;
+    border: 1px solid #dee2e6;
+}
+
+.notificationWarning {
+    background-color: #fff3cd;
+    color: #856404;
+    border-bottom: 1px solid #ffeeba;
+}
+
+.notificationError {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.notificationCenter {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.notificationRight {
+    right: 10px;
+}
+
+#notificationSpinner {
+    position: absolute;
+    right: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    vertical-align:middle;
+    height: 30px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+#notificationCloseButton {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0.4;
+}
+
+#notificationCloseButton:hover {
+    opacity: 1;
+}
+
+.menuButton {
+    color: #505050;
+    font-size: 0.9em;
+    padding: 13px;
+    margin-right: 10px;
+    cursor: default;
+    height: 14px;
+    background-color: #fafafa;
+    display: inline-block;
+    user-select: none;
+}
+
+.menuButton:hover {
+    opacity: 1 !important;
+}
+
+.menuContent {
+    position: absolute;
+    display: none;
+    z-index: 20;
+    font-size: 0.9em;
+    color: #505050;
+    padding: 7px 0;
+    background-color: #fafafa;
+    border-bottom: solid 1px #aaaaaa;
+    border-left: solid 1px #aaaaaa;
+    border-right: solid 1px #aaaaaa;
+    margin-right: -1px;
+}
+
+.right {
+    right: 0;
+}
+
+.menuRow {
+    margin: 1px;
+    padding: 7px 10px;
+    cursor: default;
+    text-align: left;
+    white-space: nowrap;
+    user-select: none;
+}
+
+.menuHighlight:hover {
+    background-color: #eeeeee;
+}
+
+.menuRow input {
+    vertical-align: middle;
+}
+
+.menuRow a {
+    text-decoration: none;
+    cursor: default;
+    color: #505050;
+}
+
+.menuTable {
+    width: 200px;
+}
+
+.menuTable td.right {
+    padding: 15px 0;
+    text-align: center;
+}
+
+.menuTable td div {
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+#paypalLink {
+    cursor: pointer;
+}
+
+#actions {
+    position: fixed;
+    top: 50px;
+    left: 0;
+    z-index: 5;
+    display: none;
+    background-color: #f6f6f6;
+}
+
+.actionButton {
+    display: block;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+#actions .separator {
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 0;
+    padding-top: 10px;
+}
+
+#dragToMove {
+    height: 20px;
+    cursor: grab;
+}
+
+#dragToMove:active {
+    cursor: grabbing;
+}
+
+#source {
+    position: fixed;
+    left: 50px;
+    top: 50px;
+    height: calc(100% - 60px);
+    z-index: 10;
+}
+
+#handleRight {
+    position: absolute;
+    right: -6px;
+    top: 0;
+    width: 8px;
+    height: 100%;
+    z-index: 20;
+    cursor: ew-resize;
+}
+
+#scrollBox {
+    position: absolute;
+    left: 510px;
+    top: 50px;
+    z-index: -999;
+    padding-right: 350px;
+    padding-bottom: 350px;
+}
+
+#diagramCanvas {
+    position: absolute;
+    left: 510px;
+    top: 50px;
+    z-index: 0;
+}
+
+#participantCanvas {
+    position: absolute;
+    left: 510px;
+    top: 50px;
+    z-index: 1;
+    opacity: 0.7;
+    display: none;
+}
+
+#interactionCanvas {
+    position: absolute;
+    left: 510px;
+    top: 50px;
+    z-index: 2;
+}
+
+.contextMenuPart {
+    white-space: nowrap;
+    z-index: 100;
+    position: absolute;
+    overflow: hidden;
+    border: 1px solid #a9a9a9;
+    font-family: sans-serif;
+    background: #FFF;
+    color: #333;
+    padding: 0;
+    margin: 0;
+}
+
+.contextMenuPart li {
+    white-space: nowrap;
+    padding: 5px 15px;
+    cursor: pointer;
+    list-style-type: none;
+}
+
+.contextSubMenuPart li:hover {
+    background-color: #eeeeee;
+}
+
+.contextSubMenuPart {
+    display: none;
+}
+
+.actionMenu {
+    display: none;
+    z-index: 100;
+    position: fixed;
+    overflow: hidden;
+    border-bottom: 1px solid #a9a9a9;
+    border-top: 1px solid #a9a9a9;
+    border-right: 1px solid #a9a9a9;
+    white-space: nowrap;
+    font-family: sans-serif;
+    background: #f6f6f6;
+    color: #333;
+    padding: 10px;
+    margin: 0;
+}
+
+.openSaveLabel {
+    font-weight: bold;
+    font-size: 0.8em;
+    color: #71bad7;
+}
+
+#cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 300;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#imageDiv {
+    padding: 20px;
+    text-align: center;
+}
+
+.popupDialogIFrameBody {
+    background-color: #ffffff;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.popupIFrame {
+    height: 100%;
+    width: 100%;
+}
+
+.popupDialog {
+    background-color: #ffffff;
+    display: none;
+    width: 70%;
+    height: 85%;
+    border: solid 1px #aaaaaa;
+}
+
+.popupDialogInner {
+    height: calc(100% - 1.4em - 70px);
+    margin: 10px;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+.popupDialogInnerWithFooter {
+    height: calc(100% - 1.4em - 70px - 37px);
+    margin: 10px;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+.popupDialogInnerIFrame {
+    height: calc(100% - 1.4em - 70px);
+    margin: 10px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.popupHead {
+    padding: 20px 10px 10px 20px;
+}
+
+.popupTitle {
+    font-size: 1.4em;
+    font-weight: normal;
+}
+
+.popupCloseIcon {
+    font-size: 1.2em;
+    color: grey;
+    cursor: pointer;
+    float: right;
+    margin-top: -10px;
+}
+
+.popupCloseIcon:hover {
+    color: #505050;
+}
+
+.popupDialogButtons {
+    float: right;
+}
+
+.popupDialogButtons button {
+    margin: 5px 0 10px 10px;
+}
+
+.popupDialogBottom {
+    margin-right: 10px;
+}
+
+#shareUrlPopup table {
+    text-align: left
+}
+
+.smallText {
+    font-size: 0.9em
+}
+
+#webStorageDiagramTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#webStorageDiagramTable td, th {
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    cursor: default;
+}
+
+#webStorageDiagramTable tbody tr:hover {
+    background: #eee;
+}
+
+.instruction {
+    margin-bottom: 50px;
+}
+
+.negtopmargin {
+    margin-top: -40px;
+    margin-bottom: -15px;
+}
+
+.instructionsImage {
+    border: dashed thin #333333;
+    margin: 10px;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+.rawLink {
+    height: 100px;
+    width: 700px;
+}
+
+.infoFAQ {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+h3.infoFAQ {
+    /*font-size: 0.9em;*/
+    font-weight: bold;
+    text-indent: 1em;
+    font-style: italic;
+}
+
+.codeMonoCaption {
+    background-color: #eff0f1;
+    color: #505050;
+    padding: 10px;
+    position: relative;
+    border: solid #cccccc 1px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.codeMono {
+    text-align: left;
+    font-family: monospace;
+    white-space: pre-line;
+}
+
+.infoHeadline {
+    font-size: 1.2em;
+    font-weight: normal;
+}
+
+.instructionHeading {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.instructionImageCaption {
+    background-color: #eff0f1;
+    color: #505050;
+    padding: 15px 50px 15px 15px;
+    position: relative;
+    border: solid #cccccc 1px;
+    margin-top: 10px;
+}
+
+.instructionImageCopyIcon {
+    font-size: 1.1em;
+    top: 5px;
+    right: 5px;
+    position: absolute;
+    border: solid #cccccc 1px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    cursor: pointer;
+    visibility: visible;
+    font-weight: bold;
+}
+
+.instructionImageCopyIcon:hover {
+    background-color: white;
+}
+
+.instructionImageCopyIcon:active {
+    background-color: #eff0f1;
+}
+
+.instructionImageText {
+    text-align: left;
+    font-family: monospace;
+    white-space: pre-line;
+}
+
+.toolTip {
+    font-size: 0.8em;
+    font-weight: normal;
+    display: block;
+    /*width: 70px;*/
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    /*border-radius: 5px;*/
+    padding: 2px 6px;
+    margin-bottom: 3px;
+
+    /* Position the tooltip */
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -30px;
+    z-index: 800;
+}
+
+#entryEditor {
+    position: absolute;
+    z-index: 999;
+    display: none;
+    top: 300px;
+    left: 300px;
+    background-color: white;
+    border: solid 1px #aaaaaa;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 3px;
+}
+
+#entryEditor textarea {
+    width: 500px;
+    height: 200px;
+}
+
+#entryEditor input {
+    width: 500px;
+}
+
+#entryEditorCloseIcon {
+    font-size: 1.2em;
+    color: grey;
+    cursor: pointer;
+    float: right;
+}
+
+#entryEditorTop {
+    cursor: grab;
+}
+
+#entryEditorTop:active {
+    cursor: grabbing;
+}
+
+#entryEditor span:hover {
+    color: #505050;
+}
+
+#participantEdit {
+    display: none;
+}
+
+/* code mirror */
+.errors {
+    width: 0.8em;
+}
+
+.CodeMirror {
+    border: 1px solid #aaa !important;
+    height: 100% !important;
+}
+
+.CodeMirror-error-scrollbar {
+    background: lightcoral;
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    opacity: .5;
+}
+
+.gTXqXb {
+    backface-visibility: hidden;
+    background-color: rgb(249, 104, 84);
+    box-sizing: border-box;
+    cursor: pointer !important;
+    display: inline-block;
+    font-weight: 700;
+    opacity: unset;
+    position: relative;
+    pointer-events: unset;
+    text-align: center;
+    text-transform: uppercase;
+    user-select: none;
+    white-space: nowrap;
+    color: rgb(255, 255, 255) !important;
+    font-size: 0.809023rem !important;
+    border-radius: 0;
+    border: 2px solid rgb(249, 104, 84);
+    border-image: initial;
+    padding: 0.5rem 0.75rem;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1) 0s;
+}
+
+.fKGKmg {
+    -webkit-box-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    visibility: visible;
+    transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1) 0s;
+}
+
+.fSJOpK {
+    align-content: flex-start;
+    -webkit-box-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1) 0s;
+}
+
+.fysOvk {
+    align-self: center;
+    -webkit-box-align: center;
+    align-items: center;
+    vertical-align: unset;
+    filter: none;
+    display: inline-flex !important;
+}
+
+.jQSwUz {
+    width: 0.75rem;
+    height: 1px;
+}
+
+.jlyAAk {
+    display: flex;
+}
+
+.jlyAAk svg {
+    align-self: center;
+    height: 0.75rem;
+    width: 0.75rem;
+}
+
+.jlyAAk svg [data-color="1"] {
+    fill: rgb(255, 255, 255);
+    transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1) 0s;
+}
+
+.jlyAAk svg [data-color="2"] {
+    fill: rgb(5, 45, 73);
+    transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1) 0s;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
