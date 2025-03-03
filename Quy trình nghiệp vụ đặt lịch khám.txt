@@ -1,0 +1,50 @@
+sequenceDiagram
+    participant Bệnh nhân
+    participant Hệ thống
+    participant Tổng đài CSKH
+
+    Bệnh nhân->>Hệ thống: Truy cập ứng dụng "Bệnh viện số"
+    Hệ thống-->>Bệnh nhân: Hiển thị giao diện trang chủ
+
+    Bệnh nhân->>Hệ thống: Đăng nhập
+    Hệ thống-->>Bệnh nhân: Xác thực thành công, hiển thị giao diện đặt lịch khám
+
+    Bệnh nhân->>Hệ thống: Truy cập mục Đặt lịch khám
+    Hệ thống-->>Bệnh nhân: Hiển thị giao diện đặt lịch
+
+    Bệnh nhân->>Hệ thống: Nhập thông tin người đặt lịch
+    Bệnh nhân->>Hệ thống: Nếu cần, bấm "Thêm người khám"
+    Hệ thống-->>Bệnh nhân: Hiển thị giao diện thêm người khám
+    Bệnh nhân->>Hệ thống: Nhập thông tin người khám
+    Hệ thống-->>Bệnh nhân: Cập nhật danh sách người khám
+
+    Bệnh nhân->>Hệ thống: Chọn địa điểm khám
+    Hệ thống-->>Bệnh nhân: Hiển thị danh sách bệnh viện
+    Bệnh nhân->>Hệ thống: Chọn bệnh viện
+
+    Bệnh nhân->>Hệ thống: Chọn phương thức khám
+    alt Đặt lịch theo bác sĩ
+        Hệ thống-->>Bệnh nhân: Hiển thị danh sách bác sĩ tại bệnh viện đã chọn
+        Bệnh nhân->>Hệ thống: Chọn bác sĩ yêu thích
+    else Đặt lịch theo chuyên khoa
+        Hệ thống-->>Bệnh nhân: Hiển thị danh sách chuyên khoa
+        Bệnh nhân->>Hệ thống: Chọn chuyên khoa
+        Hệ thống-->>Bệnh nhân: Hệ thống tự động điều phối bác sĩ
+    else Đặt lịch theo triệu chứng
+        Hệ thống-->>Bệnh nhân: Hiển thị danh sách triệu chứng
+        Bệnh nhân->>Hệ thống: Chọn triệu chứng
+        Hệ thống-->>Bệnh nhân: Gợi ý chuyên khoa điều trị
+        Bệnh nhân->>Hệ thống: Chọn chuyên khoa
+        Hệ thống-->>Bệnh nhân: Hệ thống tự động chọn bác sĩ phù hợp
+    end
+
+    Bệnh nhân->>Hệ thống: Chọn ngày giờ khám
+    Hệ thống-->>Bệnh nhân: Hiển thị lịch trống
+    Bệnh nhân->>Hệ thống: Nhập lý do khám và đặt lịch hẹn
+
+    Hệ thống-->>Bệnh nhân: Hiển thị thông tin xác nhận
+    Bệnh nhân->>Hệ thống: Xác nhận đặt lịch
+    Hệ thống->>Tổng đài CSKH: Gửi yêu cầu xác nhận
+    Tổng đài CSKH->>Bệnh nhân: Gọi điện xác nhận đặt lịch
+    Tổng đài CSKH->>Hệ thống: Xác nhận lịch hẹn
+    Hệ thống-->>Bệnh nhân: Thông báo hoàn tất đặt lịch
