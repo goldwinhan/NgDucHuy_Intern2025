@@ -128,9 +128,230 @@ CREATE TABLE Appointment (
     CONSTRAINT fk_patient_appt FOREIGN KEY (patient_id) REFERENCES Patients(ID) ON DELETE NO ACTION ON UPDATE NO ACTION,
     CONSTRAINT fk_doctor_appt FOREIGN KEY (doctor_id) REFERENCES Doctor(ID) ON DELETE NO ACTION ON UPDATE NO ACTION
 );
+CREATE TABLE Medical_Record (
+    ID INT IDENTITY(1,1) PRIMARY KEY,  -- Sử dụng IDENTITY thay vì AUTO_INCREMENT
+    record_id AS ('MR' + CAST(ID AS VARCHAR(10))) PERSISTED,  -- Tạo mã định danh dạng MR1, MR2,...
+    patient_id INT NOT NULL,  -- Liên kết với Patients.ID
+    doctor_id INT NOT NULL,  -- Liên kết với Doctor.ID
+    visit_date DATETIME NOT NULL,  -- Ngày khám
+    diagnosis TEXT NOT NULL,  -- Chẩn đoán
+    diagnosis_code VARCHAR(10),  -- Mã chẩn đoán (ICD-10, ví dụ)
+    treatment TEXT,  -- Phương pháp điều trị
+    notes TEXT,  -- Ghi chú
+    attachments TEXT,  -- Đính kèm (liên kết file, nếu có)
+    created_at DATETIME NOT NULL DEFAULT GETDATE(),  -- Thời gian tạo
+    updated_at DATETIME NOT NULL DEFAULT GETDATE(),  -- Thời gian cập nhật
+    -- Khóa ngoại liên kết với Patients và Doctor
+    CONSTRAINT fk_patient_medical FOREIGN KEY (patient_id) REFERENCES Patients(ID) ON DELETE NO ACTION ON UPDATE NO ACTION,
+    CONSTRAINT fk_doctor_medical FOREIGN KEY (doctor_id) REFERENCES Doctor(ID) ON DELETE NO ACTION ON UPDATE NO ACTION
+);
+CREATE TABLE Prescription (
+    ID INT IDENTITY(1,1) PRIMARY KEY,  -- Sử dụng IDENTITY thay vì AUTO_INCREMENT
+    prescription_id AS ('PR' + CAST(ID AS VARCHAR(10))) PERSISTED,  -- Tạo mã định danh dạng PR1, PR2,...
+    patient_id INT NOT NULL,  -- Liên kết với Patients.ID
+    doctor_id INT NOT NULL,  -- Liên kết với Doctor.ID
+    issue_date DATETIME NOT NULL,  -- Ngày phát hành đơn thuốc
+    validity_period DATE NOT NULL,  -- Thời hạn hiệu lực
+    prescription_type VARCHAR(20) DEFAULT 'one_time' CHECK (prescription_type IN ('one_time', 'recurring')),  -- Thay ENUM bằng CHECK
+    status VARCHAR(20) DEFAULT 'active' CHECK (status IN ('active', 'expired', 'used')),  -- Thay ENUM bằng CHECK
+    instructions TEXT,  -- Hướng dẫn sử dụng
+    created_at DATETIME NOT NULL DEFAULT GETDATE(),  -- Thời gian tạo
+    updated_at DATETIME NOT NULL DEFAULT GETDATE(),  -- Thời gian cập nhật
+    -- Khóa ngoại liên kết với Patients và Doctor
+    CONSTRAINT fk_patient_prescription FOREIGN KEY (patient_id) REFERENCES Patients(ID) ON DELETE NO ACTION ON UPDATE NO ACTION,
+    CONSTRAINT fk_doctor_prescription FOREIGN KEY (doctor_id) REFERENCES Doctor(ID) ON DELETE NO ACTION ON UPDATE NO ACTION
+);
+CREATE TABLE Medication (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    medication_id AS ('MED' + CAST(ID AS VARCHAR(10))) PERSISTED,
+    medication_name VARCHAR(100) NOT NULL UNIQUE,
+    generic_name VARCHAR(100) NOT NULL,
+    unit_price DECIMAL(10,2) NOT NULL CHECK (unit_price >= 0),
+    unit VARCHAR(20) NOT NULL,
+    description TEXT,
+    side_effects TEXT,
+    contraindications TEXT,
+    created_at DATETIME NOT NULL DEFAULT GETDATE(),
+    updated_at DATETIME NOT NULL DEFAULT GETDATE()
+);
+INSERT INTO Medication (medication_name, generic_name, unit_price, unit, description, side_effects, contraindications)
+VALUES
+('Paracetamol', 'Acetaminophen', 500.00, 'viên', N'Thuốc giảm đau, hạ sốt', N'Buồn nôn, phát ban', N'Dị ứng paracetamol'),
+('Amoxicillin', 'Amoxicillin', 2000.00, 'viên', N'Kháng sinh phổ rộng', N'Tiêu chảy, dị ứng', N'Dị ứng penicillin'),
+('Insulin', 'Insulin', 150000.00, 'lọ', N'Điều trị tiểu đường', N'Hạ đường huyết', N'Hạ đường huyết');
+
+CREATE TABLE Prescription_Medication (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    prescription_medication_id AS ('PM' + CAST(ID AS VARCHAR(10))) PERSISTED,
+    prescription_id INT NOT NULL,
+    medication_id INT NOT NULL,
+    quantity INT NOT NULL CHECK (quantity > 0),
+    dosage_instructions TEXT NOT NULL,
+    created_at DATETIME NOT NULL DEFAULT GETDATE(),
+    updated_at DATETIME NOT NULL DEFAULT GETDATE(),
+    CONSTRAINT fk_prescription FOREIGN KEY (prescription_id) REFERENCES Prescription(ID) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT fk_medication FOREIGN KEY (medication_id) REFERENCES Medication(ID) ON DELETE NO ACTION ON UPDATE CASCADE
+);
 
 
 
+CREATE TABLE [Order] (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    order_id AS ('ORD' + CAST(ID AS VARCHAR(10))) PERSISTED,
+    patient_id INT NOT NULL,
+    prescription_id INT NOT NULL,
+    order_date DATETIME NOT NULL,
+    total_amount DECIMAL(15,2) NOT NULL CHECK (total_amount >= 0),
+    status VARCHAR(20) DEFAULT 'pending' CHECK (status IN ('pending', 'processing', 'shipped', 'delivered', 'cancelled')),
+    shipping_address VARCHAR(255) NOT NULL,
+    created_at DATETIME NOT NULL DEFAULT GETDATE(),
+    updated_at DATETIME NOT NULL DEFAULT GETDATE(),
+    CONSTRAINT fk_patient_order FOREIGN KEY (patient_id) REFERENCES Patients(ID) ON DELETE NO ACTION ON UPDATE CASCADE,
+    CONSTRAINT fk_prescription_order FOREIGN KEY (prescription_id) REFERENCES Prescription(ID) ON DELETE NO ACTION ON UPDATE CASCADE
+);
+
+CREATE TABLE Order_Item (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    order_item_id AS ('OI' + CAST(ID AS VARCHAR(10))) PERSISTED,
+    order_id INT NOT NULL,
+    prescription_medication_id INT NOT NULL,
+    quantity_ordered INT NOT NULL CHECK (quantity_ordered > 0),
+    unit_price DECIMAL(10,2) NOT NULL CHECK (unit_price >= 0),
+    subtotal DECIMAL(10,2) NOT NULL CHECK (subtotal >= 0),
+    created_at DATETIME NOT NULL DEFAULT GETDATE(),
+    updated_at DATETIME NOT NULL DEFAULT GETDATE(),
+    CONSTRAINT fk_order FOREIGN KEY (order_id) REFERENCES [Order](ID) ,
+    CONSTRAINT fk_prescription_medication FOREIGN KEY (prescription_medication_id) REFERENCES Prescription_Medication(ID) 
+);
+
+
+CREATE TABLE Payment (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    payment_id AS ('PAY' + CAST(ID AS VARCHAR(10))) PERSISTED,
+    patient_id INT NOT NULL,
+    order_id INT,
+    appointment_id INT,
+    amount DECIMAL(15,2) NOT NULL CHECK (amount > 0),
+    payment_method VARCHAR(20) NOT NULL CHECK (payment_method IN ('cash', 'card', 'bank_transfer', 'mobile_payment')),
+    payment_status VARCHAR(20) DEFAULT 'pending' CHECK (payment_status IN ('pending', 'completed', 'failed')),
+    transaction_id VARCHAR(50),
+    payment_date DATETIME NOT NULL,
+    created_at DATETIME NOT NULL DEFAULT GETDATE(),
+    updated_at DATETIME NOT NULL DEFAULT GETDATE(),
+    CONSTRAINT fk_patient_payment FOREIGN KEY (patient_id) REFERENCES Patients(ID) ON DELETE NO ACTION ON UPDATE NO ACTION,
+    CONSTRAINT fk_order_payment FOREIGN KEY (order_id) REFERENCES [Order](ID) ON DELETE SET NULL ON UPDATE NO ACTION,
+    CONSTRAINT fk_appointment_payment FOREIGN KEY (appointment_id) REFERENCES Appointment(ID) ON DELETE SET NULL ON UPDATE NO ACTION,
+    CONSTRAINT chk_order_or_appointment CHECK (
+        (order_id IS NOT NULL AND appointment_id IS NULL) OR 
+        (order_id IS NULL AND appointment_id IS NOT NULL) OR 
+        (order_id IS NULL AND appointment_id IS NULL)
+    )
+);
+
+CREATE TABLE Invoices (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    invoice_id AS ('INV' + CAST(ID AS VARCHAR(10))) PERSISTED,
+    patient_id INT NOT NULL,
+    payment_id INT NOT NULL,
+    invoice_number VARCHAR(20) NOT NULL UNIQUE,
+    total_amount DECIMAL(15,2) NOT NULL CHECK (total_amount > 0),
+    issue_date DATETIME NOT NULL,
+    status VARCHAR(20) DEFAULT 'issued' CHECK (status IN ('issued', 'paid', 'void')),
+    created_at DATETIME NOT NULL DEFAULT GETDATE(),
+    updated_at DATETIME NOT NULL DEFAULT GETDATE(),
+    CONSTRAINT fk_patient_invoice FOREIGN KEY (patient_id) REFERENCES Patients(ID) ON DELETE NO ACTION ON UPDATE CASCADE,
+    CONSTRAINT fk_payment_invoice FOREIGN KEY (payment_id) REFERENCES Payment(ID) ON DELETE NO ACTION ON UPDATE CASCADE
+);
+
+CREATE TABLE Feedback (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    feedback_id AS ('FB' + CAST(ID AS VARCHAR(10))) PERSISTED,
+    patient_id INT NOT NULL,
+    doctor_id INT NOT NULL,
+    rating TINYINT NOT NULL CHECK (rating BETWEEN 1 AND 5),
+    comment TEXT,
+    feedback_date DATETIME NOT NULL,
+    created_at DATETIME NOT NULL DEFAULT GETDATE(),
+    updated_at DATETIME NOT NULL DEFAULT GETDATE(),
+    CONSTRAINT fk_patient_feedback FOREIGN KEY (patient_id) REFERENCES Patients(ID) ON DELETE NO ACTION ON UPDATE NO ACTION,
+    CONSTRAINT fk_doctor_feedback FOREIGN KEY (doctor_id) REFERENCES Doctor(ID) ON DELETE NO ACTION ON UPDATE NO ACTION
+);
+
+CREATE TABLE Schedule (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    schedule_id AS ('SCH' + CAST(ID AS VARCHAR(10))) PERSISTED,
+    doctor_id INT NOT NULL,
+    start_time DATETIME NOT NULL,
+    end_time DATETIME NOT NULL,
+    status VARCHAR(20) DEFAULT 'available' CHECK (status IN ('available', 'booked', 'unavailable')),
+    recurrence_pattern VARCHAR(50),
+    created_at DATETIME NOT NULL DEFAULT GETDATE(),
+    updated_at DATETIME NOT NULL DEFAULT GETDATE(),
+    CONSTRAINT fk_doctor_schedule FOREIGN KEY (doctor_id) REFERENCES Doctor(ID) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT chk_time_validity CHECK (start_time < end_time)
+);
+
+CREATE TABLE Support_Request (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    request_id AS ('SR' + CAST(ID AS VARCHAR(10))) PERSISTED,
+    user_id INT NOT NULL,
+    assigned_to INT,
+    subject VARCHAR(100) NOT NULL,
+    description TEXT NOT NULL,
+    priority VARCHAR(20) DEFAULT 'medium' CHECK (priority IN ('low', 'medium', 'high')),
+    status VARCHAR(20) DEFAULT 'open' CHECK (status IN ('open', 'in_progress', 'resolved', 'closed')),
+    request_date DATETIME NOT NULL,
+    resolved_date DATETIME,
+    created_at DATETIME NOT NULL DEFAULT GETDATE(),
+    updated_at DATETIME NOT NULL DEFAULT GETDATE(),
+    CONSTRAINT fk_user_request FOREIGN KEY (user_id) REFERENCES Users(ID) ON DELETE NO ACTION ON UPDATE NO ACTION,
+    CONSTRAINT fk_assigned_to FOREIGN KEY (assigned_to) REFERENCES Users(ID) ON DELETE SET NULL ON UPDATE NO ACTION
+);
+
+CREATE TABLE Notification (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    notification_id AS ('NOTI' + CAST(ID AS VARCHAR(10))) PERSISTED,
+    user_id INT NOT NULL,
+    title VARCHAR(100) NOT NULL,
+    message TEXT NOT NULL,
+    status VARCHAR(20) DEFAULT 'unread' CHECK (status IN ('unread', 'read')),
+    related_entity_type VARCHAR(50),
+    related_entity_id INT,
+    sent_date DATETIME NOT NULL,
+    created_at DATETIME NOT NULL DEFAULT GETDATE(),
+    updated_at DATETIME NOT NULL DEFAULT GETDATE(),
+    CONSTRAINT fk_user_notification FOREIGN KEY (user_id) REFERENCES Users(ID) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE Chat_Session (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    session_id AS ('CS' + CAST(ID AS VARCHAR(10))) PERSISTED,
+    user1_id INT NOT NULL,
+    user2_id INT NOT NULL,
+    start_time DATETIME NOT NULL,
+    end_time DATETIME,
+    is_active BIT DEFAULT 1,
+    session_type VARCHAR(20) NOT NULL CHECK (session_type IN ('consultation', 'support')),
+    created_at DATETIME NOT NULL DEFAULT GETDATE(),
+    updated_at DATETIME NOT NULL DEFAULT GETDATE(),
+    CONSTRAINT fk_user1_session FOREIGN KEY (user1_id) REFERENCES Users(ID) ON DELETE NO ACTION ON UPDATE NO ACTION,
+    CONSTRAINT fk_user2_session FOREIGN KEY (user2_id) REFERENCES Users(ID) ON DELETE NO ACTION ON UPDATE NO ACTION,
+    CONSTRAINT chk_users_different CHECK (user1_id != user2_id),
+    CONSTRAINT chk_chat_session_time_validity CHECK (end_time IS NULL OR start_time < end_time)
+);
+
+CREATE TABLE Chat_Message (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    message_id AS ('MSG' + CAST(ID AS VARCHAR(10))) PERSISTED,
+    session_id INT NOT NULL,
+    user_id INT NOT NULL,
+    message_content TEXT NOT NULL,
+    sent_at DATETIME NOT NULL,
+    created_at DATETIME NOT NULL DEFAULT GETDATE(),
+    updated_at DATETIME NOT NULL DEFAULT GETDATE(),
+    CONSTRAINT fk_session_message FOREIGN KEY (session_id) REFERENCES Chat_Session(ID) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT fk_user_message FOREIGN KEY (user_id) REFERENCES Users(ID) ON DELETE NO ACTION ON UPDATE CASCADE
+);
 
 
 
