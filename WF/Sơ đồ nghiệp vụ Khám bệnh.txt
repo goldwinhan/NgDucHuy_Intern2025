@@ -1,0 +1,49 @@
+sequenceDiagram
+    participant BệnhNhân
+    participant NhânViênTiếpNhận
+    participant HệThốngQuảnLý
+    participant BácSĩ
+    participant KỹThuậtViênXétNghiệm
+    participant KếToán
+    participant NhânViênHànhChính
+
+    BệnhNhân->>NhânViênTiếpNhận: Cung cấp thông tin cá nhân và lý do khám, chờ láy số thứ tự Khám bệnh
+    NhânViênTiếpNhận->>HệThốngQuảnLý: Nhập thông tin bệnh nhân
+    HệThốngQuảnLý-->>NhânViênTiếpNhận: Xác nhận thông tin
+
+    alt Có thẻ BHYT
+        NhânViênTiếpNhận->>HệThốngQuảnLý: Kiểm tra thông tin thẻ BHYT
+        HệThốngQuảnLý-->>NhânViênTiếpNhận: Xác nhận thẻ BHYT hợp lệ
+        NhânViênTiếpNhận-->>BệnhNhân: Hướng dẫn quy trình khám BHYT
+    else Không có thẻ BHYT
+        NhânViênTiếpNhận-->>BệnhNhân: Hướng dẫn quy trình khám tự nguyện
+    end
+
+    NhânViênTiếpNhận-->>BệnhNhân: Hướng dẫn bước tiếp theo và cung cấp số thứ tự khám bệnh
+
+    BệnhNhân->>BácSĩ: Khám lâm sàng
+    BácSĩ->>BệnhNhân: Hỏi triệu chứng và tiền sử bệnh
+    BácSĩ->>BệnhNhân: Yêu cầu xét nghiệm (nếu cần)
+    BệnhNhân->>KỹThuậtViênXétNghiệm: Thực hiện xét nghiệm
+    KỹThuậtViênXétNghiệm->>BácSĩ: Trả kết quả xét nghiệm
+    BácSĩ->>BệnhNhân: Chẩn đoán và đưa ra phác đồ điều trị
+    BácSĩ->>BệnhNhân: Kê đơn thuốc và hướng dẫn sử dụng
+
+    alt Có thẻ BHYT
+        BácSĩ->>KếToán: Thông báo chi phí khám chữa bệnh (áp dụng BHYT)
+        KếToán->>BệnhNhân: Thông báo số tiền cần thanh toán (nếu có)
+        BệnhNhân->>KếToán: Thanh toán phần viện phí không được BHYT chi trả
+    else Không có thẻ BHYT
+        BácSĩ->>KếToán: Thông báo chi phí khám chữa bệnh (tự nguyện)
+        KếToán->>BệnhNhân: Thông báo số tiền cần thanh toán
+        BệnhNhân->>KếToán: Thanh toán toàn bộ viện phí
+    end
+
+    KếToán->>HệThốngQuảnLý: Cập nhật thông tin thanh toán
+
+    BácSĩ->>BệnhNhân: Hướng dẫn theo dõi và lịch tái khám
+    BácSĩ->>BệnhNhân: Nhắc nhở tái khám hoặc theo dõi tình trạng
+
+    BácSĩ->>NhânViênHànhChính: Cập nhật hồ sơ bệnh án
+    NhânViênHànhChính->>HệThốngQuảnLý: Lưu trữ hồ sơ
+    HệThốngQuảnLý-->>NhânViênHànhChính: Xác nhận lưu trữ
