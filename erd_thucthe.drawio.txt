@@ -1,0 +1,598 @@
+<mxfile host="app.diagrams.net" modified="2025-05-23T03:33:00.000Z" agent="Grok 3" version="1.0" etag="abcd1234" type="device">
+  <diagram id="erd_hospital" name="ERD">
+    <mxGraphModel dx="1500" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Entity: Nguoi_Dung -->
+        <mxCell id="nd_entity" value="Nguoi_Dung" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;" vertex="1" parent="1">
+          <mxGeometry x="50" y="50" width="200" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="nd_pk" value="&lt;u&gt;ma_nguoi_dung&lt;/u&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="nd_entity">
+          <mxGeometry width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nd_attr1" value="ten_dang_nhap" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="nd_entity">
+          <mxGeometry y="30" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nd_attr2" value="email" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="nd_entity">
+          <mxGeometry y="60" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nd_attr3" value="loai_nguoi_dung" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="nd_entity">
+          <mxGeometry y="90" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nd_attr4" value="ho_ten" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="nd_entity">
+          <mxGeometry y="120" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nd_attr5" value="so_dien_thoai" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="nd_entity">
+          <mxGeometry y="150" width="200" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Entity: Benh_Nhan -->
+        <mxCell id="bn_entity" value="Benh_Nhan" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;" vertex="1" parent="1">
+          <mxGeometry x="350" y="50" width="200" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="bn_pk" value="&lt;u&gt;ma_benh_nhan&lt;/u&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="bn_entity">
+          <mxGeometry width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bn_fk" value="ma_nguoi_dung (FK)" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="bn_entity">
+          <mxGeometry y="30" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bn_attr1" value="ngay_sinh" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="bn_entity">
+          <mxGeometry y="60" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bn_attr2" value="gioi_tinh" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="bn_entity">
+          <mxGeometry y="90" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bn_attr3" value="dia_chi" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="bn_entity">
+          <mxGeometry y="120" width="200" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Entity: Bao_Hiem -->
+        <mxCell id="bh_entity" value="Bao_Hiem" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;" vertex="1" parent="1">
+          <mxGeometry x="650" y="50" width="200" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="bh_pk" value="&lt;u&gt;ma_bao_hiem&lt;/u&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="bh_entity">
+          <mxGeometry width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bh_fk" value="ma_benh_nhan (FK)" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="bh_entity">
+          <mxGeometry y="30" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bh_attr1" value="ten_nha_cung_cap" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="bh_entity">
+          <mxGeometry y="60" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bh_attr2" value="so_hop_dong" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="bh_entity">
+          <mxGeometry y="90" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bh_attr3" value="ngay_het_han" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="bh_entity">
+          <mxGeometry y="120" width="200" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Entity: Chuyen_Khoa -->
+        <mxCell id="ck_entity" value="Chuyen_Khoa" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;" vertex="1" parent="1">
+          <mxGeometry x="50" y="300" width="200" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ck_pk" value="&lt;u&gt;ma_chuyen_khoa&lt;/u&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="ck_entity">
+          <mxGeometry width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ck_attr1" value="ten_chuyen_khoa" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="ck_entity">
+          <mxGeometry y="30" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ck_attr2" value="mo_ta" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="ck_entity">
+          <mxGeometry y="60" width="200" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Entity: Bac_Si -->
+        <mxCell id="bs_entity" value="Bac_Si" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;" vertex="1" parent="1">
+          <mxGeometry x="350" y="300" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="bs_pk" value="&lt;u&gt;ma_bac_si&lt;/u&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="bs_entity">
+          <mxGeometry width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bs_fk1" value="ma_nguoi_dung (FK)" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="bs_entity">
+          <mxGeometry y="30" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bs_fk2" value="ma_chuyen_khoa (FK)" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="bs_entity">
+          <mxGeometry y="60" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bs_attr1" value="so_giay_phep" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="bs_entity">
+          <mxGeometry y="90" width="200" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Entity: Lich_Hen -->
+        <mxCell id="lh_entity" value="Lich_Hen" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;" vertex="1" parent="1">
+          <mxGeometry x="650" y="300" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="lh_pk" value="&lt;u&gt;ma_lich_hen&lt;/u&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="lh_entity">
+          <mxGeometry width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lh_fk1" value="ma_benh_nhan (FK)" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="lh_entity">
+          <mxGeometry y="30" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lh_fk2" value="ma_bac_si (FK)" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="lh_entity">
+          <mxGeometry y="60" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lh_attr1" value="ngay_gio_hen" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="lh_entity">
+          <mxGeometry y="90" width="200" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Entity: Ho_So_Y_Te -->
+        <mxCell id="hsyt_entity" value="Ho_So_Y_Te" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;" vertex="1" parent="1">
+          <mxGeometry x="50" y="500" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="hsyt_pk" value="&lt;u&gt;ma_ho_so_y_te&lt;/u&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="hsyt_entity">
+          <mxGeometry width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hsyt_fk1" value="ma_benh_nhan (FK)" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="hsyt_entity">
+          <mxGeometry y="30" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hsyt_fk2" value="ma_bac_si (FK)" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="hsyt_entity">
+          <mxGeometry y="60" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hsyt_attr1" value="chan_doan" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="hsyt_entity">
+          <mxGeometry y="90" width="200" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Entity: Don_Thuoc -->
+        <mxCell id="dt_entity" value="Don_Thuoc" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;" vertex="1" parent="1">
+          <mxGeometry x="350" y="500" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="dt_pk" value="&lt;u&gt;ma_don_thuoc&lt;/u&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="dt_entity">
+          <mxGeometry width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dt_fk1" value="ma_benh_nhan (FK)" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="dt_entity">
+          <mxGeometry y="30" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dt_fk2" value="ma_bac_si (FK)" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="dt_entity">
+          <mxGeometry y="60" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dt_attr1" value="ngay_ke_don" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="dt_entity">
+          <mxGeometry y="90" width="200" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Entity: Thuoc -->
+        <mxCell id="t_entity" value="Thuoc" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;" vertex="1" parent="1">
+          <mxGeometry x="650" y="500" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="t_pk" value="&lt;u&gt;ma_thuoc&lt;/u&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="t_entity">
+          <mxGeometry width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t_attr1" value="ten_thuoc" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="t_entity">
+          <mxGeometry y="30" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t_attr2" value="gia_don_vi" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="t_entity">
+          <mxGeometry y="60" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="t_attr3" value="don_vi" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="t_entity">
+          <mxGeometry y="90" width="200" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Entity: Thuoc_Trong_Don -->
+        <mxCell id="ttd_entity" value="Thuoc_Trong_Don" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;" vertex="1" parent="1">
+          <mxGeometry x="950" y="500" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ttd_pk" value="&lt;u&gt;ma_thuoc_trong_don&lt;/u&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="ttd_entity">
+          <mxGeometry width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ttd_fk1" value="ma_don_thuoc (FK)" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="ttd_entity">
+          <mxGeometry y="30" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ttd_fk2" value="ma_thuoc (FK)" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="ttd_entity">
+          <mxGeometry y="60" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ttd_attr1" value="so_luong" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="ttd_entity">
+          <mxGeometry y="90" width="200" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Entity: Don_Hang -->
+        <mxCell id="dh_entity" value="Don_Hang" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;" vertex="1" parent="1">
+          <mxGeometry x="50" y="700" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="dh_pk" value="&lt;u&gt;ma_don_hang&lt;/u&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="dh_entity">
+          <mxGeometry width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dh_fk1" value="ma_benh_nhan (FK)" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="dh_entity">
+          <mxGeometry y="30" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dh_fk2" value="ma_don_thuoc (FK)" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="dh_entity">
+          <mxGeometry y="60" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="dh_attr1" value="tong_gia_tri" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="dh_entity">
+          <mxGeometry y="90" width="200" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Entity: Mat_Hang_Don_Hang -->
+        <mxCell id="mhdh_entity" value="Mat_Hang_Don_Hang" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;" vertex="1" parent="1">
+          <mxGeometry x="350" y="700" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="mhdh_pk" value="&lt;u&gt;ma_mat_hang_don_hang&lt;/u&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="mhdh_entity">
+          <mxGeometry width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="mhdh_fk1" value="ma_don_hang (FK)" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="mhdh_entity">
+          <mxGeometry y="30" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="mhdh_fk2" value="ma_thuoc_trong_don (FK)" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="mhdh_entity">
+          <mxGeometry y="60" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="mhdh_attr1" value="so_luong_dat" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="mhdh_entity">
+          <mxGeometry y="90" width="200" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Entity: Thanh_Toan -->
+        <mxCell id="tt_entity" value="Thanh_Toan" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;" vertex="1" parent="1">
+          <mxGeometry x="650" y="700" width="200" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="tt_pk" value="&lt;u&gt;ma_thanh_toan&lt;/u&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="tt_entity">
+          <mxGeometry width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tt_fk1" value="ma_benh_nhan (FK)" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="tt_entity">
+          <mxGeometry y="30" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tt_fk2" value="ma_don_hang (FK)" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="tt_entity">
+          <mxGeometry y="60" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tt_fk3" value="ma_lich_hen (FK)" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="tt_entity">
+          <mxGeometry y="90" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tt_attr1" value="so_tien" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="tt_entity">
+          <mxGeometry y="120" width="200" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Entity: Hoa_Don -->
+        <mxCell id="hd_entity" value="Hoa_Don" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;" vertex="1" parent="1">
+          <mxGeometry x="950" y="700" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="hd_pk" value="&lt;u&gt;ma_hoa_don&lt;/u&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="hd_entity">
+          <mxGeometry width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hd_fk1" value="ma_benh_nhan (FK)" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="hd_entity">
+          <mxGeometry y="30" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hd_fk2" value="ma_thanh_toan (FK)" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="hd_entity">
+          <mxGeometry y="60" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hd_attr1" value="tong_so_tien" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="hd_entity">
+          <mxGeometry y="90" width="200" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Entity: Phan_Hoi -->
+        <mxCell id="ph_entity" value="Phan_Hoi" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;" vertex="1" parent="1">
+          <mxGeometry x="50" y="900" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ph_pk" value="&lt;u&gt;ma_phan_hoi&lt;/u&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="ph_entity">
+          <mxGeometry width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ph_fk1" value="ma_benh_nhan (FK)" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="ph_entity">
+          <mxGeometry y="30" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ph_fk2" value="ma_bac_si (FK)" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="ph_entity">
+          <mxGeometry y="60" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ph_attr1" value="diem_danh_gia" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="ph_entity">
+          <mxGeometry y="90" width="200" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Entity: Lich_Lam_Viec -->
+        <mxCell id="llv_entity" value="Lich_Lam_Viec" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;" vertex="1" parent="1">
+          <mxGeometry x="350" y="900" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="llv_pk" value="&lt;u&gt;ma_lich_lam_viec&lt;/u&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="llv_entity">
+          <mxGeometry width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="llv_fk" value="ma_bac_si (FK)" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="llv_entity">
+          <mxGeometry y="30" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="llv_attr1" value="thoi_gian_bat_dau" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="llv_entity">
+          <mxGeometry y="60" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="llv_attr2" value="thoi_gian_ket_thuc" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="llv_entity">
+          <mxGeometry y="90" width="200" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Entity: Yeu_Cau_Ho_Tro -->
+        <mxCell id="ycht_entity" value="Yeu_Cau_Ho_Tro" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;" vertex="1" parent="1">
+          <mxGeometry x="650" y="900" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ycht_pk" value="&lt;u&gt;ma_yeu_cau&lt;/u&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="ycht_entity">
+          <mxGeometry width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ycht_fk1" value="ma_nguoi_dung (FK)" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="ycht_entity">
+          <mxGeometry y="30" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ycht_fk2" value="duoc_phan_cong (FK)" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="ycht_entity">
+          <mxGeometry y="60" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ycht_attr1" value="tieu_de" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="ycht_entity">
+          <mxGeometry y="90" width="200" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Entity: Thong_Bao -->
+        <mxCell id="tb_entity" value="Thong_Bao" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;" vertex="1" parent="1">
+          <mxGeometry x="950" y="900" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_pk" value="&lt;u&gt;ma_thong_bao&lt;/u&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="tb_entity">
+          <mxGeometry width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_fk" value="ma_nguoi_dung (FK)" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="tb_entity">
+          <mxGeometry y="30" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_attr1" value="tieu_de" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="tb_entity">
+          <mxGeometry y="60" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tb_attr2" value="noi_dung" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="tb_entity">
+          <mxGeometry y="90" width="200" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Entity: Phien_Chat -->
+        <mxCell id="pc_entity" value="Phien_Chat" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;" vertex="1" parent="1">
+          <mxGeometry x="50" y="1100" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="pc_pk" value="&lt;u&gt;ma_phien_chat&lt;/u&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="pc_entity">
+          <mxGeometry width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pc_fk1" value="ma_nguoi_dung_1 (FK)" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="pc_entity">
+          <mxGeometry y="30" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pc_fk2" value="ma_nguoi_dung_2 (FK)" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="pc_entity">
+          <mxGeometry y="60" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pc_attr1" value="thoi_gian_bat_dau" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="pc_entity">
+          <mxGeometry y="90" width="200" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Entity: Tin_Nhan_Chat -->
+        <mxCell id="tnc_entity" value="Tin_Nhan_Chat" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;" vertex="1" parent="1">
+          <mxGeometry x="350" y="1100" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="tnc_pk" value="&lt;u&gt;ma_tin_nhan&lt;/u&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="tnc_entity">
+          <mxGeometry width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tnc_fk1" value="ma_phien_chat (FK)" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="tnc_entity">
+          <mxGeometry y="30" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tnc_fk2" value="ma_nguoi_gui (FK)" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="tnc_entity">
+          <mxGeometry y="60" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tnc_attr1" value="noi_dung" style="shape=partialRectangle;html=1;whiteSpace=wrap;" vertex="1" parent="tnc_entity">
+          <mxGeometry y="90" width="200" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Relationships -->
+        <!-- Nguoi_Dung 1:1 Benh_Nhan -->
+        <mxCell id="nd_bn_rel" value="1:1" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERone;startArrow=ERone;" edge="1" parent="1" source="nd_entity" target="bn_entity">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Benh_Nhan 1:1 Bao_Hiem -->
+        <mxCell id="bn_bh_rel" value="1:1" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERone;startArrow=ERone;" edge="1" parent="1" source="bn_entity" target="bh_entity">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Nguoi_Dung 1:1 Bac_Si -->
+        <mxCell id="nd_bs_rel" value="1:1" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERone;startArrow=ERone;" edge="1" parent="1" source="nd_entity" target="bs_entity">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="150" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Chuyen_Khoa 1:N Bac_Si -->
+        <mxCell id="ck_bs_rel" value="1:N" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERmany;startArrow=ERone;" edge="1" parent="1" source="ck_entity" target="bs_entity">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Benh_Nhan 1:N Lich_Hen -->
+        <mxCell id="bn_lh_rel" value="1:N" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERmany;startArrow=ERone;" edge="1" parent="1" source="bn_entity" target="lh_entity">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="450" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Bac_Si 1:N Lich_Hen -->
+        <mxCell id="bs_lh_rel" value="1:N" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERmany;startArrow=ERone;" edge="1" parent="1" source="bs_entity" target="lh_entity">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Benh_Nhan 1:N Ho_So_Y_Te -->
+        <mxCell id="bn_hsyt_rel" value="1:N" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERmany;startArrow=ERone;" edge="1" parent="1" source="bn_entity" target="hsyt_entity">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="250" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Bac_Si 1:N Ho_So_Y_Te -->
+        <mxCell id="bs_hsyt_rel" value="1:N" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERmany;startArrow=ERone;" edge="1" parent="1" source="bs_entity" target="hsyt_entity">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="350" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Benh_Nhan 1:N Don_Thuoc -->
+        <mxCell id="bn_dt_rel" value="1:N" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERmany;startArrow=ERone;" edge="1" parent="1" source="bn_entity" target="dt_entity">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="450" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Bac_Si 1:N Don_Thuoc -->
+        <mxCell id="bs_dt_rel" value="1:N" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERmany;startArrow=ERone;" edge="1" parent="1" source="bs_entity" target="dt_entity">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Don_Thuoc 1:N Thuoc_Trong_Don -->
+        <mxCell id="dt_ttd_rel" value="1:N" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERmany;startArrow=ERone;" edge="1" parent="1" source="dt_entity" target="ttd_entity">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="750" y="550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Thuoc 1:N Thuoc_Trong_Don -->
+        <mxCell id="t_ttd_rel" value="1:N" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERmany;startArrow=ERone;" edge="1" parent="1" source="t_entity" target="ttd_entity">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Benh_Nhan 1:N Don_Hang -->
+        <mxCell id="bn_dh_rel" value="1:N" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERmany;startArrow=ERone;" edge="1" parent="1" source="bn_entity" target="dh_entity">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="250" y="650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Don_Thuoc 1:N Don_Hang -->
+        <mxCell id="dt_dh_rel" value="1:N" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERmany;startArrow=ERone;" edge="1" parent="1" source="dt_entity" target="dh_entity">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="350" y="650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Don_Hang 1:N Mat_Hang_Don_Hang -->
+        <mxCell id="dh_mhdh_rel" value="1:N" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERmany;startArrow=ERone;" edge="1" parent="1" source="dh_entity" target="mhdh_entity">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Thuoc_Trong_Don 1:N Mat_Hang_Don_Hang -->
+        <mxCell id="ttd_mhdh_rel" value="1:N" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERmany;startArrow=ERone;" edge="1" parent="1" source="ttd_entity" target="mhdh_entity">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="750" y="750" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Benh_Nhan 1:N Thanh_Toan -->
+        <mxCell id="bn_tt_rel" value="1:N" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERmany;startArrow=ERone;" edge="1" parent="1" source="bn_entity" target="tt_entity">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="550" y="650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Don_Hang 1:N Thanh_Toan -->
+        <mxCell id="dh_tt_rel" value="1:N" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERmany;startArrow=ERone;" edge="1" parent="1" source="dh_entity" target="tt_entity">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="450" y="750" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Lich_Hen 1:N Thanh_Toan -->
+        <mxCell id="lh_tt_rel" value="1:N" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERmany;startArrow=ERone;" edge="1" parent="1" source="lh_entity" target="tt_entity">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Thanh_Toan 1:N Hoa_Don -->
+        <mxCell id="tt_hd_rel" value="1:N" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERmany;startArrow=ERone;" edge="1" parent="1" source="tt_entity" target="hd_entity">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Benh_Nhan 1:N Hoa_Don -->
+        <mxCell id="bn_hd_rel" value="1:N" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERmany;startArrow=ERone;" edge="1" parent="1" source="bn_entity" target="hd_entity">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="650" y="850" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Benh_Nhan 1:N Phan_Hoi -->
+        <mxCell id="bn_ph_rel" value="1:N" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERmany;startArrow=ERone;" edge="1" parent="1" source="bn_entity" target="ph_entity">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="250" y="850" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Bac_Si 1:N Phan_Hoi -->
+        <mxCell id="bs_ph_rel" value="1:N" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERmany;startArrow=ERone;" edge="1" parent="1" source="bs_entity" target="ph_entity">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="350" y="850" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Bac_Si 1:N Lich_Lam_Viec -->
+        <mxCell id="bs_llv_rel" value="1:N" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERmany;startArrow=ERone;" edge="1" parent="1" source="bs_entity" target="llv_entity">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Nguoi_Dung 1:N Yeu_Cau_Ho_Tro (ma_nguoi_dung) -->
+        <mxCell id="nd_ycht_rel1" value="1:N" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERmany;startArrow=ERone;" edge="1" parent="1" source="nd_entity" target="ycht_entity">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="550" y="850" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Nguoi_Dung 1:N Yeu_Cau_Ho_Tro (duoc_phan_cong) -->
+        <mxCell id="nd_ycht_rel2" value="1:N" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERmany;startArrow=ERone;" edge="1" parent="1" source="nd_entity" target="ycht_entity">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="650" y="850" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Nguoi_Dung 1:N Thong_Bao -->
+        <mxCell id="nd_tb_rel" value="1:N" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERmany;startArrow=ERone;" edge="1" parent="1" source="nd_entity" target="tb_entity">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="750" y="850" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Nguoi_Dung 1:N Phien_Chat (ma_nguoi_dung_1) -->
+        <mxCell id="nd_pc_rel1" value="1:N" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERmany;startArrow=ERone;" edge="1" parent="1" source="nd_entity" target="pc_entity">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="150" y="1050" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Nguoi_Dung 1:N Phien_Chat (ma_nguoi_dung_2) -->
+        <mxCell id="nd_pc_rel2" value="1:N" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERmany;startArrow=ERone;" edge="1" parent="1" source="nd_entity" target="pc_entity">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="250" y="1050" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Phien_Chat 1:N Tin_Nhan_Chat -->
+        <mxCell id="pc_tnc_rel" value="1:N" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERmany;startArrow=ERone;" edge="1" parent="1" source="pc_entity" target="tnc_entity">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Nguoi_Dung 1:N Tin_Nhan_Chat -->
+        <mxCell id="nd_tnc_rel" value="1:N" style="edgeStyle=entityRelationEdgeStyle;endArrow=ERmany;startArrow=ERone;" edge="1" parent="1" source="nd_entity" target="tnc_entity">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="350" y="1050" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
