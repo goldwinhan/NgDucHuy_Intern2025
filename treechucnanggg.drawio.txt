@@ -1,0 +1,595 @@
+<mxfile host="app.diagrams.net" modified="2025-05-27T03:20:00.000Z" agent="Grok 3" version="1.0" type="device">
+  <diagram name="Bệnh Viện Số">
+    <mxGraphModel dx="800" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <!-- Root Node: Ứng dụng Bệnh Viện Số -->
+        <mxCell id="root1" value="Ứng dụng Bệnh Viện Số" style="rounded=1;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="80" y="0" width="200" height="60" as="geometry"/>
+        </mxCell>
+        <!-- Quản lý tài khoản -->
+        <mxCell id="f1" value="1. Quản lý tài khoản" style="rounded=1;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="80" y="100" width="220" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="root1" target="f1" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Sub-Functions -->
+        <mxCell id="f1_1" value="1.1 Quản lý thông tin cá nhân (BN, BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="100" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f1_2" value="1.2 Đổi mật khẩu (BN, BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="160" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f1_3" value="1.3 Liên kết bảo hiểm y tế (BN)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="220" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f1_4" value="1.4 Đăng Nhập (BN, BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="280" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f1_5" value="1.5 Đăng Ký (BN, BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="340" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f1_6" value="1.6 Đăng Xuất (BN, BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="400" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f1_7" value="1.7 Cập nhật thông tin chuyên môn (BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="460" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <!-- Edges for Sub-Functions -->
+        <mxCell id="e1_1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f1" target="f1_1" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1_2" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f1" target="f1_2" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1_3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f1" target="f1_3" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1_4" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f1" target="f1_4" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1_5" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f1" target="f1_5" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1_6" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f1" target="f1_6" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1_7" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f1" target="f1_7" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+<mxCell id="f2" value="2. Đặt lịch khám bệnh" style="rounded=1;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="80" y="600" width="220" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="root1" target="f2" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Sub-Functions for Đặt lịch khám bệnh -->
+        <mxCell id="f2_1" value="2.1 Chọn chuyên khoa khám (BN)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="600" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f2_2" value="2.2 Chọn bác sĩ theo chuyên khoa" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="660" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f2_3" value="2.3 Chọn ngày và giờ khám" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="720" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f2_4" value="2.4 Xác nhận và lưu lịch hẹn" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="780" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f2_5" value="2.5 Nhận thông báo xác nhận lịch hẹn" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="840" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <!-- Edges for Đặt lịch khám bệnh Sub-Functions -->
+        <mxCell id="e2_1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f2" target="f2_1" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2_2" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f2" target="f2_2" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2_3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f2" target="f2_3" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2_4" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f2" target="f2_4" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2_5" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f2" target="f2_5" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+<!-- 3. Quản lý lịch hẹn -->
+        <mxCell id="f3" value="3. Quản lý lịch hẹn" style="rounded=1;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="80" y="100" width="220" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="root1" target="f3" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Sub-Functions for Quản lý lịch hẹn -->
+        <mxCell id="f3_1" value="3.1 Xem danh sách lịch hẹn đã đặt (BN, BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="100" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f3_2" value="3.2 Hủy hoặc thay đổi lịch hẹn (BN, BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="160" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f3_3" value="3.3 Nhận thông báo nhắc lịch khám (BN, BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="220" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f3_4" value="3.4 Xác nhận hoặc từ chối lịch hẹn bệnh nhân (BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="280" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <!-- Edges for Quản lý lịch hẹn Sub-Functions -->
+        <mxCell id="e3_1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f3" target="f3_1" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3_2" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f3" target="f3_2" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3_3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f3" target="f3_3" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3_4" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f3" target="f3_4" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+<!-- 4. Hồ sơ bệnh án -->
+        <mxCell id="f4" value="4. Hồ sơ bệnh án" style="rounded=1;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="80" y="100" width="220" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="root1" target="f4" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Sub-Functions for Hồ sơ bệnh án -->
+        <mxCell id="f4_1" value="4.1 Xem hồ sơ bệnh án (BN, BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="100" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f4_2" value="4.2 Xem kết quả xét nghiệm (BN, BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="160" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f4_3" value="4.3 Xem đơn thuốc và hướng dẫn sử dụng thuốc (BN, BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="220" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f4_4" value="4.4 Lưu trữ lịch sử khám bệnh (BN, BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="280" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f4_5" value="4.5 Cập nhật hồ sơ bệnh án (BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="340" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f4_6" value="4.6 Tải lên kết quả xét nghiệm hoặc hình ảnh y khoa (BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="400" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <!-- Edges for Hồ sơ bệnh án Sub-Functions -->
+        <mxCell id="e4_1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f4" target="f4_1" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4_2" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f4" target="f4_2" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4_3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f4" target="f4_3" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4_4" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f4" target="f4_4" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4_5" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f4" target="f4_5" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4_6" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f4" target="f4_6" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+  <!-- 5. Tư vấn trực tuyến -->
+        <mxCell id="f5" value="5. Tư vấn trực tuyến" style="rounded=1;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="80" y="100" width="220" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="root1" target="f5" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Sub-Functions for Tư vấn trực tuyến -->
+        <mxCell id="f5_1" value="5.1 Gửi câu hỏi tư vấn sức khỏe (BN)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="100" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f5_2" value="5.2 Chat trực tuyến với bác sĩ (BN, BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="160" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f5_3" value="5.3 Xem lịch sử tư vấn (BN, BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="220" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f5_4" value="5.4 Trả lời các câu hỏi tư vấn sức khỏe từ bệnh nhân (BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="280" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <!-- Edges for Tư vấn trực tuyến Sub-Functions -->
+        <mxCell id="e5_1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f5" target="f5_1" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5_2" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f5" target="f5_2" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5_3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f5" target="f5_3" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5_4" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f5" target="f5_4" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+ <!-- 6. Dịch vụ khám tại nhà -->
+        <mxCell id="f6" value="6. Dịch vụ khám tại nhà" style="rounded=1;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="80" y="100" width="220" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="root1" target="f6" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Sub-Functions for Dịch vụ khám tại nhà -->
+        <mxCell id="f6_1" value="6.1 Đặt yêu cầu khám tại nhà (BN)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="100" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f6_2" value="6.2 Chọn loại dịch vụ (khám tổng quát, tiêm chủng, chăm sóc sức khỏe) (BN)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="160" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f6_3" value="6.3 Theo dõi trạng thái yêu cầu (BN)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="220" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <!-- Edges for Dịch vụ khám tại nhà Sub-Functions -->
+        <mxCell id="e6_1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f6" target="f6_1" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6_2" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f6" target="f6_2" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6_3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f6" target="f Debra6_3" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+       <!-- 7. Thanh toán trực tuyến -->
+        <mxCell id="f7" value="7. Thanh toán trực tuyến" style="rounded=1;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="80" y="100" width="220" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="root1" target="f7" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Sub-Functions for Thanh toán trực tuyến -->
+        <mxCell id="f7_1" value="7.1 Xem chi phí dịch vụ (BN)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="100" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f7_2" value="7.2 Thanh toán qua thẻ ngân hàng hoặc ví điện tử (BN)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="160" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f7_3" value="7.3 Xem lịch sử thanh toán (BN)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="220" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <!-- Edges for Thanh toán trực tuyến Sub-Functions -->
+        <mxCell id="e7_1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f7" target="f7_1" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e7_2" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f7" target="f7_2" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e7_3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f7" target="f7_3" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- 8. Mua thuốc trực tuyến -->
+        <mxCell id="f8" value="8. Mua thuốc trực tuyến" style="rounded=1;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="80" y="400" width="220" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="root1" target="f8" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Sub-Functions for Mua thuốc trực tuyến -->
+        <mxCell id="f8_1" value="8.1 Tra cứu danh mục thuốc đã được kê đơn (BN)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="400" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f8_2" value="8.2 Đặt mua thuốc trực tuyến (BN)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="460" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f8_3" value="8.3 Theo dõi đơn hàng và trạng thái giao hàng (BN)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="520" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <!-- Edges for Mua thuốc trực tuyến Sub-Functions -->
+        <mxCell id="e8_1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f8" target="f8_1" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e8_2" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f8" target="f8_2" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e8_3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f8" target="f8_3" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+       <!-- 9. Thông báo và nhắc nhở -->
+        <mxCell id="f9" value="9. Thông báo và nhắc nhở" style="rounded=1;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="80" y="100" width="220" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="root1" target="f9" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Sub-Functions for Thông báo và nhắc nhở -->
+        <mxCell id="f9_1" value="9.1 Nhắc nhở lịch khám sắp tới (BN, BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="100" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f9_2" value="9.2 Nhắc nhở giờ uống thuốc (BN)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="160" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f9_3" value="9.3 Thông báo kết quả xét nghiệm (BN, BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="220" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f9_4" value="9.4 Cập nhật tin tức y tế và các dịch vụ mới của bệnh viện (BN, BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="280" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <!-- Edges for Thông báo và nhắc nhở Sub-Functions -->
+        <mxCell id="e9_1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f9" target="f9_1" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e9_2" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f9" target="f9_2" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e9_3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f9" target="f9_3" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e9_4" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f9" target="f9_4" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- 10. Tìm kiếm thông tin -->
+        <mxCell id="f10" value="10. Tìm kiếm thông tin" style="rounded=1;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="80" y="500" width="220" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="root1" target="f10" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Sub-Functions for Tìm kiếm thông tin -->
+        <mxCell id="f10_1" value="10.1 Tìm kiếm bác sĩ theo chuyên khoa (BN)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="500" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f10_2" value="10.2 Tìm kiếm phòng khám (BN)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="560" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f10_3" value="10.3 Tìm kiếm thông tin thuốc (BN)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="620" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f10_4" value="10.4 Tìm kiếm lịch sử khám bệnh (BN, BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="680" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f10_5" value="10.5 Tìm kiếm bệnh nhân theo thông tin cá nhân hoặc mã bệnh nhân (BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="740" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <!-- Edges for Tìm kiếm thông tin Sub-Functions -->
+        <mxCell id="e10_1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f10" target="f10_1" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e10_2" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f10" target="f10_2" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e10_3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f10" target="f10_3" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e10_4" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f10" target="f10_4" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e10_5" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f10" target="f10_5" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- 11. Đánh giá và phản hồi -->
+        <mxCell id="f11" value="11. Đánh giá và phản hồi" style="rounded=1;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1000" width="220" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="e11" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="root1" target="f11" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Sub-Functions for Đánh giá và phản hồi -->
+        <mxCell id="f11_1" value="11.1 Đánh giá chất lượng dịch vụ khám bệnh (BN)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="1000" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f11_2" value="11.2 Đánh giá bác sĩ đã khám (BN)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="1060" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f11_3" value="11.3 Gửi góp ý và phản hồi về ứng dụng (BN)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="1120" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f11_4" value="11.4 Xem đánh giá từ bệnh nhân (BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="1180" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <!-- Edges for Đánh giá và phản hồi Sub-Functions -->
+        <mxCell id="e11_1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f11" target="f11_1" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e11_2" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f11" target="f11_2" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e11_3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f11" target="f11_3" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e11_4" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f11" target="f11_4" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+    <!-- 12. Hỗ trợ khách hàng -->
+        <mxCell id="f12" value="12. Hỗ trợ khách hàng" style="rounded=1;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="80" y="100" width="220" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="e12" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="root1" target="f12" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Sub-Functions for Hỗ trợ khách hàng -->
+        <mxCell id="f12_1" value="12.1 Liên hệ nhân viên hỗ trợ qua chat (BN, BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="100" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f12_2" value="12.2 Xem câu hỏi thường gặp (FAQ) (BN, BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="160" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f12_3" value="12.3 Gửi yêu cầu hỗ trợ kỹ thuật (BN, BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="220" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <!-- Edges for Hỗ trợ khách hàng Sub-Functions -->
+        <mxCell id="e12_1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f12" target="f12_1" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e12_2" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f12" target="f12_2" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e12_3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f12" target="f12_3" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- 13. Cài đặt ứng dụng -->
+        <mxCell id="f13" value="13. Cài đặt ứng dụng" style="rounded=1;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="80" y="400" width="220" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="e13" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="root1" target="f13" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Sub-Functions for Cài đặt ứng dụng -->
+        <mxCell id="f13_1" value="13.1 Bật/tắt thông báo (BN, BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="400" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f13_2" value="13.2 Thay đổi ngôn ngữ (BN, BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="460" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f13_3" value="13.3 Quản lý quyền riêng tư (BN, BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="520" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <!-- Edges for Cài đặt ứng dụng Sub-Functions -->
+        <mxCell id="e13_1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f13" target="f13_1" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e13_2" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f13" target="f13_2" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e13_3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f13" target="f13_3" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- 14. Đặt lịch tiêm chủng -->
+        <mxCell id="f14" value="14. Đặt lịch tiêm chủng" style="rounded=1;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="80" y="700" width="220" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="e14" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="root1" target="f14" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Sub-Functions for Đặt lịch tiêm chủng -->
+        <mxCell id="f14_1" value="14.1 Chọn loại vắc-xin (BN)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="700" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f14_2" value="14.2 Chọn thời gian và địa điểm tiêm chủng (BN)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="760" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f14_3" value="14.3 Xác nhận lịch tiêm chủng (BN)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="820" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f14_4" value="14.4 Nhận thông báo nhắc nhở lịch tiêm (BN)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="880" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <!-- Edges for Đặt lịch tiêm chủng Sub-Functions -->
+        <mxCell id="e14_1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f14" target="f14_1" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e14_2" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f14" target="f14_2" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e14_3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f14" target="f14_3" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e14_4" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f14" target="f14_4" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+       <!-- 15. Gọi cấp cứu -->
+        <mxCell id="f15" value="15. Gọi cấp cứu" style="rounded=1;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="80" y="100" width="220" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="e15" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="root1" target="f15" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Sub-Functions for Gọi cấp cứu -->
+        <mxCell id="f15_1" value="15.1 Gửi yêu cầu gọi cấp cứu (BN)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="100" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f15_2" value="15.2 Theo dõi trạng thái xe cấp cứu (BN)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="160" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f15_3" value="15.3 Liên hệ trực tiếp với nhân viên cấp cứu (BN)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="220" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <!-- Edges for Gọi cấp cứu Sub-Functions -->
+        <mxCell id="e15_1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f15" target="f15_1" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e15_2" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f15" target="f15_2" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e15_3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f15" target="f15_3" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- 16. ChatBot Tư Vấn -->
+        <mxCell id="f16" value="16. ChatBot Tư Vấn" style="rounded=1;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="80" y="400" width="220" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="e16" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="root1" target="f16" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Sub-Functions for ChatBot Tư Vấn -->
+        <mxCell id="f16_1" value="16.1 Trả lời câu hỏi y tế cơ bản (BN)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="400" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f16_2" value="16.2 Hướng dẫn sơ cứu (BN)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="460" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f16_3" value="16.3 Đề xuất bác sĩ hoặc chuyên khoa (BN)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="520" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <!-- Edges for ChatBot Tư Vấn Sub-Functions -->
+        <mxCell id="e16_1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f16" target="f16_1" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e16_2" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f16" target="f16_2" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e16_3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f16" target="f16_3" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- 17. Quản lý đơn thuốc -->
+        <mxCell id="f17" value="17. Quản lý đơn thuốc" style="rounded=1;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="80" y="700" width="220" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="e17" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="root1" target="f17" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Sub-Functions for Quản lý đơn thuốc -->
+        <mxCell id="f17_1" value="17.1 Xem đơn thuốc hiện tại (BN, BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="700" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f17_2" value="17.2 Cập nhật đơn thuốc (BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="760" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f17_3" value="17.3 Nhắc nhở thời gian uống thuốc (BN)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="820" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <!-- Edges for Quản lý đơn thuốc Sub-Functions -->
+        <mxCell id="e17_1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f17" target="f17_1" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e17_2" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f17" target="f17_2" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e17_3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f17" target="f17_3" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- 18. Quản lý lịch làm việc -->
+        <mxCell id="f18" value="18. Quản lý lịch làm việc" style="rounded=1;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1000" width="220" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="e18" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="root1" target="f18" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Sub-Functions for Quản lý lịch làm việc -->
+        <mxCell id="f18_1" value="18.1 Xem lịch làm việc (BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="1000" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f18_2" value="18.2 Cập nhật lịch làm việc (BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="1060" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="f18_3" value="18.3 Nhận thông báo lịch làm việc (BS)" style="rounded=1;fillColor=#e1d5e7;" vertex="1" parent="1">
+          <mxGeometry x="300" y="1120" width="300" height="40" as="geometry"/>
+        </mxCell>
+        <!-- Edges for Quản lý lịch làm việc Sub-Functions -->
+        <mxCell id="e18_1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f18" target="f18_1" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e18_2" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f18" target="f18_2" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e18_3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="f18" target="f18_3" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
